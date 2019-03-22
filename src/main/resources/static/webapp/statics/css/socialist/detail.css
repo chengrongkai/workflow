@@ -1,0 +1,25 @@
+.imgList:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:left;
+    visibility:hidden;
+}
+.imgItem{
+    /*width: 150px;*/
+    height: 170px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.imgItem img{
+
+    height: 150px;
+    display: block;
+}
+.imgItem p{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align: center;
+}

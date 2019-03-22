@@ -1,0 +1,129 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <script src="../../../statics/plugins/ztree/jquery.ztree.all.min.js"></script>
+        <link rel="stylesheet" href="../../../statics/plugins/ztree/css/metroStyle/metroStyle.css">
+        <script src="../../../common/js/treeTool.js"></script>
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoDetail.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <form action="" id = 'userForm'  class="layui-form" lay-filter="myform" method="post">
+            <div class="layui-card-body">
+    
+                <div class="cardOne mt24">
+    
+                    <div class="OneBody mt24">
+                        <div class="oneBody">
+                            <ul class="myTable">
+                               <li class="layui-row">
+                                   <input type="text"  style="visibility: hidden;display: none" autocomplete="off"/>
+                               　　<input type="password" id="lueluelue" style="visibility: hidden;" autocomplete="off"/>
+                                   <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*用户名</div>
+                                   <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                       <input type="text" name="id"  autocomplete="off" class="layui-hide">
+                                           <input type="text" name="userName" required  lay-verify="required"
+                                                  placeholder="请输入用户名" disableautocomplete  autocomplete="off" class="layui-input">
+                                   </div>
+                               </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*姓名</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="name" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*邮箱地址</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="email" required lay-verify="required|email"  placeholder="请输入邮箱地址"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*联系电话</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="phone" required lay-verify="required|phone" placeholder="请输入联系电话" autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*部门</div>
+
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6" id="result">
+                                        <!--<input type="text" name="deptId"  autocomplete="off" class="layui-hide">-->
+                                        <input    value="-1"  id="deptId"  cyType="treeTool" lay-verify="required"
+                                                  cyprops="url:'/frontframe/json/select.json',name:'deptId'" placeholder="请选择上级菜单" class="layui-input"/>
+                                    </div>
+                                    <!--<div class="layui-inline layui-col-md4 layui-col-sm4 pdl60 g-text-aux">不选择默认为一级部门</div>-->
+
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*角色</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6" >
+                                        <!--<input type="text" name="roleName" required  placeholder="请输入角色"-->
+                                               <!--autocomplete="off" class="layui-input">-->
+                                        <!--<input type="text" name="roleId"  autocomplete="off" class="layui-hide">-->
+
+                                        <select id="role" name="role" lay-verify="required">
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*登陆密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="passwordId"  autocomplete="off" class="layui-hide">
+                                        <input type="password" id = "password" name="password" required disableautocomplete
+                                               placeholder="请输入登陆密码" lay-verify="required|pwd"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*确认密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="surePasswordId"  autocomplete="off"
+                                               class="layui-hide">
+                                        <input type="password" id = 'surePassword' disableautocomplete lay-verify="required|pwd" name="surePassword" required  placeholder="请输入确认密码"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">备注</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="remark"  placeholder=""
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="layui-form-item mt34">
+                    <div class="layui-input-block bodyBtn">
+                        <button id="submit" class="layui-btn" lay-submit lay-filter="formSubmit">保存并提交</button>
+                        <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../../../statics/js/common.js"></script>
+    <script src="../../../statics/js/formatDatasUtil.js"></script>
+    <script src="../../../statics/js/md5.js"></script>
+
+    <script src="../../../statics/js/component.js"></script>
+    <script src="../../../statics/js/systemSetting/userManage/add.js"></script>
+
+    </body>
+</html>
+    

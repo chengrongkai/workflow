@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单点登录</title>
+</head>
+<style>
+    .normal{
+        font-size: 36px;
+        margin-left: 20px;
+        color:black;
+    }
+    .error{
+        font-size: 36px;
+        margin-left: 20px;
+        color: red;
+    }
+</style>
+<body>
+<div>
+    <input type="text" id="info" value="${info}" style="display: none">
+    <p id="loginInfo" class="normal">单点登录中，请稍等!</p>
+</div>
+<script src="../statics/libs/jquery-1.10.2.min.js"></script>
+<script src="../statics/js/jquery.extend.js"></script>
+<script src="../statics/js/common.js"></script>
+    <script type="text/javascript">
+        var info = $("#info").val();
+        $.ajax({
+            type: "GET",
+            url: property.getProjectPath()+"TongYiPingTai/singleLogin.do?info="+info,
+            success: function (result) {
+                if (result.success == 1){
+                    localStorage.userInfo = JSON.stringify(result.data);
+                    localStorage.functinId = '3407276609592431735736823983';
+                    window.location.href='/admin/index.html';
+                }else{
+                    $("#loginInfo").removeClass("normal").addClass("error");
+                    $("#loginInfo").text(result.error.message);
+                }
+
+            }
+        });
+    </script>
+</body>
+</html>

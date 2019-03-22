@@ -1,0 +1,145 @@
+
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/videoList.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="layui-card">
+    <form class="layui-form" action="">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../statics/images/videoList/Group 6.png" alt="">
+                <span class="carFont">筛选查询</span>
+            </div>
+            <div class="layui-btn-group flexRight">
+                <button class="layui-btn layui-btn-green" lay-submit="" lay-filter="moreSearch">
+                    <i class="fa fa-chevron-down">&nbsp;</i>展开筛选
+                </button>
+                <button class="layui-btn search-btn myBtn layui-hide"  lay-submit="" lay-filter="formDemo" id="search">
+                    <!--<i class="fa fa-search">&nbsp;</i>-->查询
+                </button>
+                <button type="reset" class="layui-btn myBtn layui-hide" lay-submit="" lay-filter="clear" id="reset"><!--<i class="fa fa-refresh">&nbsp;</i>-->重置</button>
+            </div>
+        </div>
+        <div class="layui-card-body">
+            <div class="layui-row">
+                <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                    <label class="layui-form-label">输入搜索:</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="keywords" name="keywords" autocomplete="off" placeholder="资料名称/编号/关联藏品" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-col-md4 layui-col-sm4">
+                    <label class="layui-form-label">分类:</label>
+                    <div class="layui-input-block">
+                        <select name="videoMark" id="videoMark" placeholder="请选择分类">
+
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-col-md4 layui-col-sm4">
+                    <label class="layui-form-label">状态:</label>
+                    <div class="layui-input-block">
+                        <select name="status" id="status" placeholder="请选择状态">
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="layui-row more-search">-->
+            <!--<div class="layui-form-item layui-col-md4 layui-col-sm4 ">-->
+            <!--<label class="layui-form-label">姓名:</label>-->
+            <!--<div class="layui-input-block">-->
+            <!--<input type="text" name="nameVague" placeholder="请输入姓名" class="layui-input">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="layui-form-item layui-col-md4 layui-col-sm4">-->
+            <!--<label class="layui-form-label">年龄:</label>-->
+            <!--<div class="layui-input-block">-->
+            <!--<select name="city">-->
+            <!--<option value=""></option>-->
+            <!--<option value="0">北京</option>-->
+            <!--<option value="1">上海</option>-->
+            <!--<option value="2">广州</option>-->
+            <!--<option value="3">深圳</option>-->
+            <!--<option value="4">杭州</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="layui-form-item layui-col-md4 layui-col-sm4">-->
+            <!--<label class="layui-form-label">提交时间:</label>-->
+            <!--<div class="layui-col-md4 layui-col-sm4 mr10">-->
+            <!--<input readonly="readonly" type="text" name="startDate" id="startDate" maxlength="20" value=""-->
+            <!--placeholder="请选择开始时间" class="layui-input Wdate"-->
+            <!--onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\'endDate\')}'})">-->
+            <!--</div>-->
+            <!--<div class="layui-col-md4 layui-col-sm4">-->
+            <!--<input readonly="readonly" type="text" name="endDate" id="endDate" maxlength="20" value=""-->
+            <!--placeholder="请选择截止时间" class="layui-input Wdate"-->
+            <!--onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\'startDate\')}'})">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </form>
+</div>
+
+
+
+<div class="layui-card">
+    <div class="layui-card-header">
+        <div class="flexLeft">
+            <img src="../../statics/images/videoList/Shape2.png" alt="">
+            <span class="carFont">数据列表</span>
+        </div>
+        <div class="layui-btn-group flexRight">
+            <button class="layui-btn layui-btn-green upload layui-hide" id="btnAdd"  data-url="page/video/videoDetail.html" title="上传影视资料">
+                上传资料
+            </button>
+            <!--<button class="layui-btn search-btn myBtn" id="upload">-->
+                <!--&lt;!&ndash;<i class="fa fa-search">&nbsp;</i>&ndash;&gt;批量导入 &nbsp; &nbsp;<i class="fa fa-chevron-down"></i></i>-->
+            <!--</button>-->
+            <!--<button type="reset" class="layui-btn myBtn">&lt;!&ndash;<i class="fa fa-refresh">&nbsp;</i>&ndash;&gt;排列方式 &nbsp; &nbsp;<i class="fa fa-chevron-down"></i></button>-->
+        </div>
+    </div>
+    <div class="layui-card-body">
+
+        <table class="layui-hide" id="test" lay-filter="test"></table>
+        <script type="text/html" id="switchTpl">
+            <!-- 这里的 checked 的状态只是演示 -->
+            <input type="checkbox" name="sex" value="{{d.id}}" lay-skin="switch" lay-text="女|男" lay-filter="sexDemo" {{ d.id == 10003 ? 'checked' : '' }}>
+        </script>
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-sm layui-hide" id="batchAuthSetting" lay-event="batchAuthSetting">批量设置</button>
+            </div>
+        </script>
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs cy-page {{(d.other3 != '1' || !(d.status== 1||d.status== 4)) ? 'layui-hide' : '' }}" lay-event="edit" data-url="page/video/videoDetail.html" id="edit" title="编辑资料">编辑</a>
+            <a class="layui-btn layui-btn-xs {{d.status== 1  ? 'layui-hide' : '' }}" lay-event="detail" data-url="page/video/videoShow.html" id="show" title="查看">查看</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{d.other3 != '1'||d.status!= 1  ? 'layui-hide' : '' }}" lay-event="del" id="delete">删除</a>
+            <a class="layui-btn layui-btn-xs cy-page {{d.other3 != '1'|| d.status!= 2  ? 'layui-hide' : '' }}" lay-event="revoke" id="revoke">撤回</a>
+            <a class="layui-btn layui-btn-xs {{!(d.other3 == '1'&&!checkMyOrg()&&d.status== 1)    ? 'layui-hide' : '' }}" lay-event="commit" id="commit">提交</a>
+            <a class="layui-btn layui-btn-xs {{!(d.other3 == '1'&&checkMyOrg()&&d.status== 1)    ? 'layui-hide' : '' }}" lay-event="publish" id="publish">发布</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{d.other3 != '1'||d.status!= 3   ? 'layui-hide' : '' }}" data-url="page/video/videoApproval.html" id="approval" title="审批" lay-event="approval">审批</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{d.status!= 4 ? 'layui-hide' : '' }}" lay-event="authSetting">设置</a>
+        </script>
+
+    </div>
+</div>
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/videoList.js"></script>
+</body>
+</html>

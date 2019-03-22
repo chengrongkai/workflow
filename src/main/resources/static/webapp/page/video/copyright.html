@@ -1,0 +1,108 @@
+
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <!--<link rel="stylesheet" href="../../statics/css/literature/literatureAdd.css">-->
+    <link rel="stylesheet" href="../../statics/css/videoDetail.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../statics/plugins/echarts/echarts.js"></script>
+    <style>
+        .layui-card .layui-btn {
+            color: #666;
+            width: 100px;
+            height: 35px;
+            background: rgba(255,255,255,1);
+             border-radius: 0!important;
+            border: 1px solid rgba(29,116,78,1);
+            line-height: 35px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-card">
+    <form action=""  class="layui-form" lay-filter="addForm" id="addForm">
+
+        <div class="layui-card-body">
+
+            <div class="cardOne mt24">
+                <div class="title"><img src="" alt=""><span>基本信息</span></div>
+
+                <div class="cardOne mt24">
+                    <div class="oneHeard">
+                        <div class="oneLeft">
+                            <span>操作人：</span>
+                            <span id="userName">admin  </span>
+                            <span>|</span>
+                            <span id="orgName">系统管理员</span>
+                        </div>
+                        <div class="oneRight">
+                            <span>日期：</span>
+                            <span id="nowDate">2018-8-21</span>
+                        </div>
+                    </div>
+                    <div class="OneBody mt24">
+                        <div class="oneBody">
+                            <ul class="myTable">
+                                <li class="layui-row">
+                                    <input type="text" name="watermarkPath" id="watermarkPath"   autocomplete="off" class="layui-hide">
+
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">水印设置</div>
+                                    <div class="layui-form-item m0 layui-col-md10 layui-col-sm6">
+                                        <div class="layui-input-inline">
+
+                                            <input type="radio" name="watermarkStatus" lay-filter="watermarkStatus" value="0" title="关闭" checked="">
+                                            <input type="radio" name="watermarkStatus" lay-filter="watermarkStatus" value="1" title="开启">
+                                        </div>
+                                        <div class="layui-input-inline">
+                                            <button type="button" class="layui-btn" id="upload" style="width: auto!important;margin: 10px">
+                                                <i class="layui-icon">&#xe67c;</i> 选择上传文件
+                                            </button>
+                                        </div>
+                                        <div class="layui-input-inline" id="demoList" style="line-height: 15px!important;">
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">版权设置</div>
+                                    <div class="layui-form-item m0 layui-col-md10 layui-col-sm6">
+                                        <div class="layui-input-inline">
+                                            <input type="radio" name="copyrightStatus" lay-filter="copyrightStatus" value="0" title="关闭">
+                                            <input type="radio" name="copyrightStatus" lay-filter="copyrightStatus" value="1" title="开启">
+                                        </div>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="copyrightContent" id="copyrightContent"  PLACEHOLDER="请输入"  autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item mt34">
+                    <div class="layui-input-block bodyBtn">
+                        <button id="submit" class="layui-btn" >保存</button>
+                        <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/copyright.js"></script>
+</body>
+</html>

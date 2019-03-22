@@ -1,0 +1,171 @@
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../statics/css/h_common.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/videoDetail.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script src="../../statics/plugins/echarts/echarts.js"></script>
+    <style>
+        .oneBody .layui-row>div{
+            height:auto !important;
+        }
+
+        .imgList{
+
+        }
+        .imgList:after{
+            content:".";
+            display:block;
+            height:0;
+            clear:left;
+            visibility:hidden;
+        }
+        .imgItem{
+            width: 150px;
+            height: 170px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .imgItem img{
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+        .imgItem p{
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            text-align: center;
+        }
+
+        .layui-input-block {
+             margin-left: auto;
+            /*min-height: 36px;*/
+        }
+    </style>
+</head>
+<body>
+<div class="layui-card">
+    <form action="" id="videoForm" class="layui-form">
+        <div class="layui-card-header h-apply-state-wrap">
+            <div class="flexLeft">
+                <div class="h-apply-state"><img src="" alt="">
+                    <span>批量审批</span>
+                    <!--<span id="currentStatus"></span>-->
+                    <!--<span>当前资料状态：已发布（不公开）</span>-->
+                </div>
+            </div>
+            <!--<div class="flexRight">-->
+                <!--<a href="" class="h-apply-state" id="setAuthSetting">设置权限</a>&nbsp;-->
+                <!--<a href="" class="h-apply-state" id="editVideo" data-url="page/video/videoDetail.html" id="edit" title="上传资料-非影视部">编辑资料</a>-->
+                <!--<a href="" class="h-apply-state" data-url="page/video/videoApproval.html"  title="审批" id="approvalButton">审批</a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="layui-card-body">
+            <div class="cardOne mt24 mb18">
+                <div class="title"><img src="" alt=""><span>申请资料信息</span></div>
+                <div class="OneBody">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="oneBody mt24">
+                        <div class="layui-row" >
+                            <div class="layui-col-md12 layui-col-sm12">
+                                <table class="layui-table" id="test" lay-filter="test"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardOne mt24 mb18">
+                <div class="title"><img src="" alt=""><span>申请内容</span></div>
+
+                <div class="OneBody mt24">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="oneBody mt24">
+                        <ul class="myTable">
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请人</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select  id="apply" disabled="disabled" name ="apply">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请部门</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select  id="applyOrg" disabled="disabled" name ="applyOrg">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请日期</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <input type="text" name="applyTime" disabled="disabled" id="applyTime" required  autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请原因</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select  id="applyReason"  name ="applyReason">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">备注</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="remark" id="remark" required placeholder="请输入备注" autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row " id="approvalLi">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*审批人</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select name="approvalInfo" id="approval">
+
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="detail" data-url="page/video/videoQueryShow.html" id="show" title="查看-非影视部">查看</a>
+                <!--<a class="layui-btn download layui-btn-danger layui-btn-xs {{d.other3 != '0' ? 'layui-hide' : '' }}" data-id="{{d.id}}" id="download" title="下载" lay-event="download">下载</a>-->
+            </script>
+            <div class="layui-form-item mt34">
+                <div class="layui-input-block bodyBtn">
+                    <button class="layui-btn"  lay-filter="saveAndSubmit" id="saveAndSubmit">保存并提交</button>
+                    <button class="layui-btn"  lay-filter="save" id="save">保存</button>
+                    <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/videoBatchApply.js"></script>
+</body>
+</html>

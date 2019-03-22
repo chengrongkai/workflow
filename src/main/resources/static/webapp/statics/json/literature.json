@@ -1,0 +1,95 @@
+{
+  "menuList": [
+    {
+      "children": null,
+      "icon": "fa fa-tachometer",
+      "list": [
+        {
+          "children": null,
+          "icon": "fa fa-font",
+          "list": null,
+          "name": "文献工作台",
+          "type": 1,
+          "url": "page/literature/workbench.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-square",
+          "list": null,
+          "name": "文献资料列表",
+          "type": 1,
+          "url": "page/literature/literatureManager.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-strikethrough",
+          "list": null,
+          "name": "公开文献列表",
+          "type": 1,
+          "url": "page/literature/openLiterature.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "申请借阅",
+          "type": 1,
+          "url": "page/literature/borrowing.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "申请下载",
+          "type": 1,
+          "url": "page/literature/download.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "申请审批列表",
+          "type": 1,
+          "url": "page/literature/applyList.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "借阅管理列表",
+          "type": 1,
+          "url": "page/literature/borrowingList.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "借阅详情",
+          "type": 1,
+          "url": "page/literature/borrowingDetail.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "文献采集统计",
+          "type": 1,
+          "url": "page/literature/collectStatistics.html"
+        }
+      ,
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "文献借阅统计",
+          "type": 1,
+          "url": "page/literature/borrowingStatistics.html"
+        }
+      ],
+      "name": "文献",
+      "type": 0,
+      "url": null
+    }
+  ],
+  "code": 0
+}

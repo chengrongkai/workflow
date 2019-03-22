@@ -1,0 +1,175 @@
+body{
+    background-color: rgba(242,242,242,1);
+    min-width: 1200px;
+}
+.layui-card{
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 5px 0px rgba(183,221,206,0.32);
+    border-radius:2px;
+    margin-bottom: 0;
+    float: left;
+}
+.layui-card:nth-child(1){
+    width:100%;
+    height:149px;
+}
+.layui-card:nth-child(2){
+    /* width:590px;*/
+    width: 49%;
+    height:350px;
+    margin-top: 20px;
+}
+.layui-card:nth-child(3){
+    width: 49%;
+    height:350px;
+    float: right;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+.layui-card:nth-child(4){
+    width: 49%;
+    height:236px;
+    margin-top: 20px;
+}
+.layui-card:nth-child(5){
+    width: 49%;
+    height:236px;
+    float: right;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+.carFont{
+    height:42px;
+    font-size:16px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(102,102,102,1);
+    line-height:42px;
+}
+.layui-nav .layui-nav-item{
+    line-height: 1px;
+}
+
+.layui-card-body{
+    padding: 0 15px 10px;
+}
+.layui-nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.layui-nav .layui-nav-item a{
+    padding: 0;
+}
+.layui-nav-item{
+    text-align: center;
+}
+.cy-page span{
+    display: block;
+    width:95px;
+    height:20px;
+    text-align: center;
+    font-size:14px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    line-height:20px;
+    margin-top: 7px;
+}
+.layui-card-body .layui-table{
+    margin-top: 17px;
+}
+.layui-table td{
+    border: none;
+    border-bottom:1px solid rgba(232,232,232,1);
+}
+.layui-table th{
+    border: none;
+}
+.checkDetail{
+    height:20px;
+    font-size:14px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(29,116,78,1);
+    line-height:20px;
+    display: block;
+}
+.tongzhiList{
+    margin-top: 7px;
+}
+.tongzhiLeft{
+    width: 30%;
+}
+.tongzhicenter{
+    width: 50%;
+    text-align: center;
+}
+.tongzhiRight{
+    width: 20%;
+    text-align: right;
+    color: #1D744E;
+}
+.tongzhiList li{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height:28px;
+    font-size:14px;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:28px;
+    margin-top: 10px;
+}
+.totalClan{
+    padding: 55px 0;
+}
+.Total{
+    display: flex;
+    justify-content: space-around;
+}
+.count{
+    height:42px;
+    font-size:30px;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:rgba(102,102,102,1);
+    line-height:42px;
+    text-align: center;
+}
+.totalName{
+    height:22px;
+    font-size:16px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(102,102,102,1);
+    line-height:22px;
+    text-align: center;
+}
+.layui-tab-pic{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    width:270px;
+    height:30px;
+    border-radius:15px;
+    border:1px solid rgba(221,221,221,1);
+}
+.layui-tab-pic li{
+    float: left;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size:14px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    text-align: center;
+    border-radius:15px;
+    cursor: pointer;
+}
+.layui-tab-pic li.active{
+    background-color:rgba(29,116,78,1);
+    color: white;
+}

@@ -1,0 +1,93 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoList.css">
+        <script src="../../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+
+        <style type="text/css">
+            .layui-laydate-content td{
+                line-height: initial;
+            }
+        </style>
+
+
+    </head>
+    <body>
+    <div class="layui-card">
+        <form class="layui-form" action="">
+            <div class="layui-card-header">
+                <div class="flexLeft">
+                    <img src="../../../statics/images/videoList/Group 6.png" alt="">
+                    <span class="carFont">筛选查询</span>
+                </div>
+                <div class="layui-btn-group flexRight">
+                    <button class="layui-btn layui-btn-green" lay-submit="" lay-filter="moreSearch">
+                        <i class="fa fa-chevron-down">&nbsp;</i>展开筛选
+                    </button>
+                    <button class="layui-btn search-btn myBtn layui-hide" id="search"  lay-submit="" lay-filter="formDemo">
+                        <!--<i class="fa fa-search">&nbsp;</i>-->查询
+                    </button>
+                    <button type="reset" class="layui-btn myBtn layui-hide" id="reset" lay-submit="" lay-filter="clear"><!--<i class="fa fa-refresh">&nbsp;</i>-->重置</button>
+                </div>
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-row">
+                    <div class="layui-form-item layui-col-md6 layui-col-sm6">
+                        <label class="layui-form-label">操作人员:</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="userName" id="userName" placeholder="请输入操作人员"
+                                   class="layui-input" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4">
+                        <label class="layui-form-label">操作日期:</label>
+                        <div class="layui-input-block">
+                            <input readonly="readonly" type="text" name="loginTime" id="loginTime" maxlength="20" value=""
+                                placeholder="请选择记录时间" class="layui-input Wdate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../../statics/images/videoList/Shape2.png" alt="">
+                <span class="carFont">数据列表</span>
+            </div>
+            <div class="layui-btn-group flexRight pdt15">
+                <!--<button class="layui-btn search-btn myBtn">-->
+                    <!--&lt;!&ndash;<i class="fa fa-search">&nbsp;</i>&ndash;&gt;显示条数 &nbsp; &nbsp;<i class="fa fa-chevron-down"></i></i>-->
+                <!--</button>-->
+            </div>
+
+        </div>
+        <div class="layui-card-body">
+    
+            <table class="layui-hide" id="test" lay-filter="test"></table>
+            <script type="text/html" id="toolbarDemo">
+                <div class="layui-btn-container">
+                    <button class="layui-btn layui-btn-sm layui-hide" id="batchDelete" lay-event="getCheckData">批量删除</button>
+                </div>
+            </script>
+        </div>
+    </div>
+    <script src="../../../statics/js/component.js"></script>
+    <script src="../../../statics/js/common.js"></script>
+    <script src="../../../statics/js/systemSetting/log/list.js"></script>
+    </body>
+</html>
+        

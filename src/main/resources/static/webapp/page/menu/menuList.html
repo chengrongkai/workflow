@@ -1,0 +1,92 @@
+
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/menuList.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="layui-card">
+    <form class="layui-form" action="">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../statics/images/videoList/Group 6.png" alt="">
+                <span class="carFont">筛选查询</span>
+            </div>
+            <div class="layui-btn-group flexRight">
+                <button class="layui-btn search-btn myBtn"  lay-submit="" lay-filter="formDemo">
+                    <!--<i class="fa fa-search">&nbsp;</i>-->查询
+                </button>
+                <button type="reset" class="layui-btn myBtn" lay-submit="" lay-filter="clear"><!--<i class="fa fa-refresh">&nbsp;</i>-->重置</button>
+            </div>
+        </div>
+        <div class="layui-card-body">
+             <div class="layui-row">
+                <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                    <label class="layui-form-label">功能名称:</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="functionname" id="functionName" placeholder="请输入功能名称" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-col-md4 layui-col-sm4">
+                    <label class="layui-form-label">功能类型:</label>
+                    <div class="layui-input-block" >
+                        <select name="typeSelect" id="typeSelect" >
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    </div>
+             </div>
+        </div>
+    </form>
+</div>
+
+
+
+<div class="layui-card">
+    <div class="layui-card-header">
+        <div class="flexLeft">
+            <img src="../../statics/images/videoList/Shape2.png" alt="">
+            <span class="carFont">数据列表</span>
+        </div>
+        <div class=" flexRight">
+
+            <!--<button type="reset" class="layui-btn myBtn">&lt;!&ndash;<i class="fa fa-refresh">&nbsp;</i>&ndash;&gt;排列方式 &nbsp; &nbsp;<i class="fa fa-chevron-down"></i></button>-->
+            <form action="" class="layui-form">
+                <button class="layui-btn layui-btn-green upload" id="addFunction" data-url="page/menu/menuDetail.html" title="新增功能" lay-filter="addFunction">
+                    添加功能
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <div class="layui-card-body">
+
+        <table class="layui-hide" id="test" lay-filter="test"></table>
+
+        <script type="text/html" id="oper-col">
+            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit" data-url="page/menu/menuDetail.html" title="编辑功能">修改</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+        <script type="text/html" id="toolbarDemo">
+
+        </script>
+
+    </div>
+</div>
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/menuList.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/videoList.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="layui-card">
+    <form class="layui-form" action="">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../statics/images/videoList/Group 6.png" alt="">
+                <span class="carFont">筛选查询</span>
+            </div>
+            <div class="layui-btn-group flexRight">
+                <button class="layui-btn layui-btn-green " lay-submit="" lay-filter="moreSearch">
+                    <i class="fa fa-chevron-down">&nbsp;</i>展开筛选
+                </button>
+                <button class="layui-btn search-btn myBtn layui-hide"  lay-submit="" lay-filter="formDemo" id="search">
+                    <!--<i class="fa fa-search">&nbsp;</i>-->查询
+                </button>
+                <button type="reset" class="layui-btn myBtn layui-hide" lay-submit="" lay-filter="clear" id="reset"><!--<i class="fa fa-refresh">&nbsp;</i>-->重置</button>
+            </div>
+        </div>
+        <div class="layui-card-body">
+             <div class="layui-row">
+                <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                    <label class="layui-form-label">输入搜索:</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="keywords" name="keywords" placeholder="资料名称/申请人" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-col-md4 layui-col-sm4">
+                    <label class="layui-form-label">所属部门:</label>
+                    <div class="layui-input-block">
+                        <select name="applyOrg" id="applyOrg" placeholder="请选择">
+
+                        </select>
+                    </div>
+                    </div>
+                <div class="layui-form-item layui-col-md4 layui-col-sm4">
+                    <label class="layui-form-label">申请状态:</label>
+                    <div class="layui-input-block">
+                        <select name="applyStatus" id="applyStatus" placeholder="请选择">
+
+                        </select>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </form>
+</div>
+
+
+
+<div class="layui-card">
+    <div class="layui-card-header">
+        <div class="flexLeft">
+            <img src="../../statics/images/videoList/Shape2.png" alt="">
+            <span class="carFont">数据列表</span>
+        </div>
+        <!--<div class="layui-btn-group flexRight">-->
+            <!--<button class="layui-btn layui-btn-green upload" id="btnAdd" data-url="page/video/videoDetail.html" title="上传影视资料">-->
+                <!--上传资料-->
+            <!--</button>-->
+            <!--<button class="layui-btn search-btn myBtn" id="upload">-->
+                <!--&lt;!&ndash;<i class="fa fa-search">&nbsp;</i>&ndash;&gt;批量导入 &nbsp; &nbsp;<i class="fa fa-chevron-down"></i></i>-->
+            <!--</button>-->
+            <!--<button type="reset" class="layui-btn myBtn">&lt;!&ndash;<i class="fa fa-refresh">&nbsp;</i>&ndash;&gt;排列方式 &nbsp; &nbsp;<i class="fa fa-chevron-down"></i></button>-->
+        <!--</div>-->
+    </div>
+    <div class="layui-card-body">
+
+        <table class="layui-hide" id="test" lay-filter="test"></table>
+        <script type="text/html" id="switchTpl">
+            <!-- 这里的 checked 的状态只是演示 -->
+            <input type="checkbox" name="sex" value="{{d.id}}" lay-skin="switch" lay-text="女|男" lay-filter="sexDemo" {{ d.id == 10003 ? 'checked' : '' }}>
+        </script>
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-sm layui-hide" id="batchDownload" lay-event="batchDownload">批量下载</button>
+            </div>
+        </script>
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs {{d.applyStatus!= 0? 'layui-hide' : '' }}" lay-event="edit" data-url="page/video/videoQueryShow.html" id="edit" title="编辑">编辑</a>
+            <a class="layui-btn layui-btn-xs {{d.applyStatus== 0? 'layui-hide' : '' }}" lay-event="detail" data-url="page/video/videoQueryShow.html" id="show" title="查看">查看</a>
+            <a class="layui-btn layui-btn-xs {{d.applyStatus!= 0? 'layui-hide' : '' }}" lay-event="del"  id="delete" >删除</a>
+            <a class="layui-btn layui-btn-xs cy-page {{d.applyStatus!= 1 ? 'layui-hide' : '' }}" lay-event="revoke" id="revoke">撤回</a>
+            <a class="layui-btn layui-btn-xs {{d.applyStatus!= 0? 'layui-hide' : '' }}" lay-event="commit" id="commit">提交</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{d.applyStatus != '2' ? 'layui-hide' : '' }}" id="download" title="下载" lay-event="download">下载</a>
+        </script>
+
+    </div>
+</div>
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/applyManagerList.js"></script>
+</body>
+</html>

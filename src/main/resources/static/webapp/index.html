@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>中国邮政邮票博物馆</title>
+    <link rel="shortcut icon" type="image/x-icon" href="statics/img/favicon.ico" media="screen"/>
+    <link rel="stylesheet" href="statics/plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="statics/plugins/layer/skin/default/layer.css">
+    <link rel="stylesheet" href="statics/css/font-awesome.min.css">
+    <link rel="stylesheet" href="statics/css/index.css">
+    <link rel="stylesheet" href="common/css/cyStyle.css">
+    <link rel="stylesheet" href="common/css/cyType.css">
+    <link rel="stylesheet" href="statics/plugins/ContextJS/css/context.standalone.green.css">
+
+</head>
+<style>
+    body{
+        height: 100%;
+    }
+    .layui-body{
+        overflow-x: auto;
+    }
+    .layui-layer-page{
+        left: 780px!important;
+        top:278px!important;
+    }
+    .layui-layer-page .layui-layer-content{
+        overflow: visible;
+    }
+</style>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+
+        <div class="layui-logo">
+            <img src="statics/images/index/Bitmap.png" alt="">
+            <img src="statics/images/index/leftSlide.png" class="toggle-collapse" alt="">
+        </div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left" id="modules">
+            <!--<li class="layui-nav-item layui-this"><a data="1111" href="javascript:createMenu('/statics/json/layuiMenu.json');">藏品</a>-->
+            <!--</li>-->
+            <!--<li class="layui-nav-item"><a href="javascript:createMenu('/statics/json/vueMenu.json');">影视</a></li>-->
+            <!--<li class="layui-nav-item"><a href="javascript:createMenu('/statics/json/literature.json');">文献</a></li>-->
+            <!--<li class="layui-nav-item"><a href="javascript:createMenu('/statics/json/vueMenu.json');">展陈</a></li>-->
+            <!--<li class="layui-nav-item"><a href="javascript:createMenu('/statics/json/vueMenu.json');">社教</a></li>-->
+            <!--<li class="layui-nav-item"><a href="javascript:createMenu('/statics/json/vueMenu.json');">公众服务</a></li>-->
+            <li class="layui-nav-item layui-this"><a href="javascript:createMenu('/webapp/statics/json/systemSettings.json');">系统设置</a></li>
+           <!-- <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="http://www.cymall.xin" target="_blank">cy官网</a></dd>
+                    <dd><a href="http://admin.cymall.xin" target="_blank">cy-security</a></dd>
+                    <dd><a href="http://fast.cymall.xin" target="_blank">cy-fast</a></dd>
+                </dl>
+            </li>-->
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <!--<li class="layui-nav-item">
+                <a href="javascript:reward();">捐赠作者</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:lockScreen();"><i class="fa fa-lock"></i>锁屏</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">通知<span class="layui-badge">9</span></a>
+            </li>-->
+            <li class="layui-nav-item">
+                <div class="layui-form component">
+                <div class="search-menu-back">
+                    <input type="text" placeholder="搜索内容" value="" id="searchName" class="layui-input menu-search">
+                    <img src="statics/images/index/search.png" id="startSearch" alt="">
+                    <!--<span class="menu-search-clear" style="display: none"><i class="layui-icon">&#x1006;</i>  </span>-->
+                </div>
+            </div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="statics/images/index/head.svg" class="layui-nav-img">
+                    <span id="userName"></span>
+                </a>
+                <!--<dl class="layui-nav-child">
+                    <dd><a href="javascript:;" class="cy-page" data-url="http://www.layui.com/">基本资料</a></dd>
+                    <dd><a href="javascript:;"  class="cy-page" data-url="http://www.baidu.com/">安全设置</a></dd>
+                </dl>-->
+            </li>
+            <li class="layui-nav-item">
+                <a class="cy-page"  href="javascript:;" data="3407276609592431735736823983" data-url="page/main/main.html" title="影视工作台"><img
+                        src="statics/images/index/home.png" alt=""></a>
+                <!--<a href="javascript:;window.location.href='/login.html'"><img
+                    src="statics/images/index/home.png" alt=""></a>--></li>
+            <li class="layui-nav-item"><a href="#" id="loginOut"><img
+                    src="statics/images/index/Shape.png" alt=""></a></li>
+
+        </ul>
+    </div>
+    <!--<div class="toggle-collapse"></div>-->
+    <div class="layui-side">
+        <div class="layui-side-scroll">
+            <!--<div class="layui-form component">
+                <div class="search-menu-back">
+                    <input type="text" placeholder="菜单名称 / url" value="" id="menuSearch" class="layui-input menu-search">
+                    <span class="menu-search-clear" style="display: none"><i class="layui-icon">&#x1006;</i>  </span>
+                </div>
+
+            </div>-->
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree">
+            </ul>
+        </div>
+        <div class="kefu">
+            <p>有任何疑问，请联系客服</p>
+            <p>1、电话：010-59273319</p>
+            <p>2、QQ群：419331519<a class="saoma" href="javascript:void(0);">扫码进群</a></p>
+            <img class="qqqun" src="statics/images/index/XFyBOvj0AJUZRrTr__thumbnail.png">
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 1px;">
+            <div id="navTab" class="layui-tab layui-tab-brief" lay-allowClose="true" lay-filter="tabs">
+                <!--<div class="layui-tab-left"><i class="layui-icon">&#xe65a;</i></div>-->
+                <ul class="layui-tab-title ">
+                    <li class="layui-this main-tab" data-url="/page/main/main.html">我的主页</li>
+
+                </ul>
+                <!--<div class="layui-tab-right"><i class="layui-icon">&#xe65b;</i></div>-->
+
+            </div>
+
+        </div>
+
+
+        <div id="main">
+            <iframe scrolling="yes" frameborder="0" class="cy-show" src="page/main/main.html"></iframe>
+        </div>
+    </div>
+
+    <!--<div class="layui-footer">
+        &lt;!&ndash; 底部固定区域 &ndash;&gt;
+        © www.cymall.xin
+    </div>-->
+</div>
+<script src="statics/libs/jquery-1.10.2.min.js"></script>
+<script src="statics/js/jquery.extend.js"></script>
+<script src="statics/plugins/ContextJS/js/context.js"></script>
+<script src="statics/plugins/layui/layui.js"></script>
+<script src="statics/plugins/layer/layer.js"></script>
+<script src="common/js/whole/utils.js"></script>
+<script src="common/js/whole/cyLayer.js"></script>
+<script src="statics/js/navTab.js"></script>
+<script src="statics/js/common.js"></script>
+<script src="statics/js/index.js"></script>
+
+</body>
+</html>

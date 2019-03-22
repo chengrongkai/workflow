@@ -1,0 +1,54 @@
+.h-apply-state-wrap {
+    background: #d8d8d8;
+}
+
+.h-apply-state button {
+    width: 80px;
+    height: 32px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    font-size: 14px;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(87, 89, 98, 1);
+    line-height: 32px;
+}
+
+.h_look_pic {
+    overflow: hidden;
+    width: 100%;
+}
+
+.h_look_pic li {
+    border: 1px solid #ccc;
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+}
+
+.h_look_pic li img {
+    width: 150px;
+    height: 135px;
+}
+
+.h_look_pic li p {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+    line-height: 38px;
+}
+
+.h-apply-back {
+    width: 80px;
+    height: 32px;display:inline-block;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    font-size: 14px;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(87, 89, 98, 1);
+    line-height: 32px;text-align:center;margin:3px 0 0;
+}

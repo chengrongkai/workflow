@@ -1,0 +1,124 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoList.css">
+
+        <style type="text/css">
+            .layui-form-label{
+                width: 90px;
+                padding: 8px 0;
+            }
+
+        </style>
+
+    </head>
+    <body>
+    <div class="layui-card">
+        <form class="layui-form" action="">
+            <div class="layui-card-header">
+                <div class="flexLeft">
+                    <img src="../../../statics/images/videoList/Group 6.png" alt="">
+                    <span class="carFont">筛选查询</span>
+                </div>
+                <div class="layui-btn-group flexRight">
+                    <button class="layui-btn layui-btn-green" lay-submit="" lay-filter="moreSearch">
+                        <i class="fa fa-chevron-down">&nbsp;</i>展开筛选
+                    </button>
+                    <button class="layui-btn search-btn myBtn"  lay-submit="" lay-filter="formDemo">
+                        <!--<i class="fa fa-search">&nbsp;</i>-->查询
+                    </button>
+                    <button type="reset" class="layui-btn myBtn" lay-submit="" lay-filter="clear"><!--<i class="fa fa-refresh">&nbsp;</i>-->重置</button>
+                </div>
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-row">
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                        <label class="layui-form-label">业务字典类型:</label>
+                        <div class="layui-input-block">
+                            <input type="text" id="dictType" name="dictType" placeholder="请输入业务字典类型"
+                                   class="layui-input" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                        <label class="layui-form-label">业务字典编码:</label>
+                        <div class="layui-input-block">
+                            <input type="text" id="dictCode" name="dictCode" placeholder="请输入业务字典编码"
+                                   class="layui-input" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                        <label class="layui-form-label">业务字典名称:</label>
+                        <div class="layui-input-block">
+                            <input type="text" id="dictName" name="dictName" placeholder="请输入业务字典名称"
+                                   class="layui-input" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="layui-card mgt0">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../../statics/images/videoList/Shape2.png" alt="">
+                <span class="carFont">数据列表</span>
+            </div>
+            <div class=" flexRight">
+
+                <form action="" class="layui-form">
+                    <button id="btnAdd" class="layui-btn layui-btn-green upload" data-url="page/systemSetting/dict/add.html" title="添加业务字典">
+                        添加
+                    </button>
+                    <!--<div class="layui-input-inline" style="width:100px;">-->
+                        <!--<select>-->
+                            <!--<option value="">批量导入</option>-->
+                            <!--<option value="0">北京</option>-->
+                            <!--<option value="1">上海</option>-->
+                            <!--<option value="2">广州</option>-->
+                            <!--<option value="3">深圳</option>-->
+                            <!--<option value="4">杭州</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="layui-input-inline" style="width:100px;">-->
+                        <!--<select>-->
+                            <!--<option value="">排列方式</option>-->
+                            <!--<option value="0">北京</option>-->
+                            <!--<option value="1">上海</option>-->
+                            <!--<option value="2">广州</option>-->
+                            <!--<option value="3">深圳</option>-->
+                            <!--<option value="4">杭州</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                </form></div>
+        </div>
+        <div class="layui-card-body">
+
+            <table class="layui-hide" id="test" lay-filter="test"></table>
+            <script type="text/html" id="switchTpl">
+                <input type="checkbox" name="status" lay-event="changeStatus" data-id="{{d.id}}"
+                       value="{{d.status}}" {{d.status== 1 ? 'checked' : '' }}  lay-skin="switch"  lay-text="ON|OFF" lay-filter="sexDemo">
+            </script>
+
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs cy-page" lay-event="edit" data-url="page/systemSetting/dict/add.html?id={{d.id}}" title="编辑业务字典">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+
+        </div>
+    </div>
+
+    <script src="../../../statics/js/common.js"></script>
+    <script src="../../../statics/js/systemSetting/dict/list.js"></script>
+    </body>
+</html>

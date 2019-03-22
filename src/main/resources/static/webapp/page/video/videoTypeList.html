@@ -1,0 +1,106 @@
+
+<html>
+    <head>
+        <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../statics/plugins/layer/layer.js"></script>
+        <script src="../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../statics/css/videoList.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <form class="layui-form" action="">
+            <div class="layui-card-header">
+                <div class="flexLeft">
+                    <img src="../../statics/images/videoList/Group 6.png" alt="">
+                    <span class="carFont">筛选查询</span>
+                </div>
+                <div class="layui-btn-group flexRight">
+                    <button class="layui-btn layui-btn-green" lay-submit="" lay-filter="moreSearch">
+                        <i class="fa fa-chevron-down">&nbsp;</i>展开筛选
+                    </button>
+                    <button class="layui-btn search-btn myBtn"  lay-submit="" lay-filter="formDemo">
+                        <!--<i class="fa fa-search">&nbsp;</i>-->查询
+                    </button>
+                    <button type="reset" class="layui-btn myBtn" lay-submit="" lay-filter="clear"><!--<i class="fa fa-refresh">&nbsp;</i>-->重置</button>
+                </div>
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-row">
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                        <label class="layui-form-label">输入搜索:</label>
+                        <div class="layui-input-block">
+                            <input type="text" id="keywords" name="keywords" placeholder="分类名称/代码" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                        <label class="layui-form-label">级别:</label>
+                        <div class="layui-input-block">
+                            <select id="typeLevel" name="typeLevel"></select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-col-md4 layui-col-sm4 ">
+                        <label class="layui-form-label">状态:</label>
+                        <div class="layui-input-block">
+                            <select id="status" name="status">
+                                <option value="">请选择</option>
+                                <option value="0">停用</option>
+                                <option value="1">启用</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="layui-card mgt0">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../statics/images/videoList/Shape2.png" alt="">
+                <span class="carFont">数据列表</span>
+            </div>
+            <div class=" flexRight">
+
+                <form action="" class="layui-form">
+                    <button id="btnAdd" class="layui-btn layui-btn-green myBtn layui-hide" id="btnAdd" data-url="page/video/videoTypeAdd.html" title="添加分类">
+                        添加分类
+                    </button>
+                    <div class="layui-input-inline" style="width:100px;">
+                        <select lay-filter="orderBy">
+                            <option value="">排列方式</option>
+                            <option value=1>更新时间</option>
+                            <option value=2>创建时间</option>
+                        </select>
+                    </div>
+                </form></div>
+        </div>
+        <div class="layui-card-body">
+
+            <table class="layui-hide" id="test" lay-filter="test"></table>
+            <script type="text/html" id="switchTpl">
+                <input type="checkbox" name="status" lay-event="changeStatus" data-id="{{d.id}}"
+                       value="{{d.status}}" {{d.status== 1 ? 'checked' : '' }}  lay-skin="switch"  lay-text="ON|OFF" lay-filter="sexDemo">
+            </script>
+
+            <script type="text/html" id="setting">
+                <a class="layui-btn layui-btn-xs cy-page {{d.typeLevel== '3' ? 'layui-hide' : '' }}" lay-event="addChildren" data-url="page/video/videoTypeAdd.html" title="新增下级">新增下级</a>
+                <a class="layui-btn layui-btn-xs cy-page {{d.typeLevel== '3' ? 'layui-hide' : '' }}" lay-event="showChildren" data-url="page/video/videoTypeAdd.html" title="查看下级">查看下级</a>
+            </script>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs cy-page" lay-event="edit" data-url="page/video/videoTypeAdd.html" title="编辑分类">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+        </div>
+    </div>
+    <script src="../../statics/js/component.js"></script>
+    <script src="../../statics/js/common.js"></script>
+    <script src="../../statics/js/videoTypeList.js"></script>
+    </body>
+</html>

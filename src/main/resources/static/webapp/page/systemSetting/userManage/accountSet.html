@@ -1,0 +1,100 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <script src="../../../statics/plugins/ztree/jquery.ztree.all.min.js"></script>
+        <link rel="stylesheet" href="../../../statics/plugins/ztree/css/metroStyle/metroStyle.css">
+        <script src="../../../common/js/treeTool.js"></script>
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoDetail.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <form action="" method="post" id = 'userForm'  class="layui-form" lay-filter="myform">
+            <div class="layui-card-body">
+    
+                <div class="cardOne mt24">
+    
+                    <div class="OneBody mt24">
+                        <div class="oneBody">
+                            <ul class="myTable">
+                               <li class="layui-row">
+                                   <!--下面2行为了隐藏360自动填充用户名和密码表单-->
+                               　　<input type="text"  style="visibility: hidden;display: none" autocomplete="off"/>
+                               　　<input type="password" id="lueluelue" style="visibility: hidden;" autocomplete="off"/>
+                                   <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*用户名</div>
+                                   <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                       <input type="text" name="id"  autocomplete="off" class="layui-hide">
+                                           <input type="text" name="userName" id="userName" required  lay-verify="required"
+                                                  placeholder="请输入用户名" autocomplete="off" disable    class="layui-input">
+                                   </div>
+                               </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*邮箱地址</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="email" id="email" required lay-verify="required|email"
+                                               placeholder="请输入邮箱地址" disable
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*旧密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="passwordId"  autocomplete="off"  class="layui-hide">
+                                        <input type="password" id = "oldpassword" name="oldpassword" required
+                                               placeholder="请输入初始密码" lay-verify="required|oldpassword|pwd"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*新密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="passwordId"  autocomplete="off" class="layui-hide">
+                                        <input type="password" id = "newpassword" disableautocomplete   name="newpassword" required
+                                               placeholder="请输入设置密码" lay-verify="required|pwd"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*确认密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="surePasswordId"  autocomplete="off"
+                                               class="layui-hide">
+                                        <input type="password" id = 'surePassword' disableautocomplete   lay-verify="required|surePassword|pwd"
+                                               name="surePassword" required  placeholder="请输入确认密码"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="layui-form-item mt34">
+                    <div class="layui-input-block bodyBtn">
+                        <button id="submit" class="layui-btn" lay-submit lay-filter="formSubmit">保存</button>
+                        <!--<button id="cancel" class="layui-btn layui-btn-primary">取消</button>-->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../../../statics/js/common.js"></script>
+    <script src="../../../statics/js/formatDatasUtil.js"></script>
+    <script src="../../../statics/js/md5.js"></script>
+
+    <script src="../../../statics/js/component.js"></script>
+    <script src="../../../statics/js/systemSetting/userManage/accountSetAdd.js"></script>`
+
+    </body>
+</html>
+    

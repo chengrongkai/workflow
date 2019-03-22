@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>中国邮政邮票博物馆</title>
+    <link rel="stylesheet" href="statics/plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="statics/css/login.css" media="all" />
+    <!--禁止嵌套,开发时打开该代码-->
+    <!--<script type="text/javascript">-->
+    <!--if(window !=top){-->
+    <!--top.location.href=location.href;-->
+    <!--}-->
+
+    <!--</script>-->
+</head>
+<body>
+<!--<video class="video-player" preload="auto" autoplay="autoplay" loop="loop" data-height="1080" data-width="1920" height="1080" width="1920">
+    <source src="http://localhost:63342/chinayouzheng/statics/login/login.mp4" type="video/mp4">
+    &lt;!&ndash;需要视频制作请联系作者qq228112142   土豆作品地址http://id.tudou.com/i/UMTQ5MTY4MzM2MA&ndash;&gt;
+</video>
+<div class="video_mask"></div>-->
+<div class="back_bg">
+
+    <div class="back_center">
+        <div class="left">
+            <img src="statics/login/Bitmap.png" alt="">
+        </div>
+        <div class="login">
+            <h1>欢迎登录</h1>
+            <form class="layui-form" autocomplete="off" method="post">
+                <div class="layui-form-item myPosition">
+                    <img src="statics/login/user.png" alt="">
+                    <input class="layui-input" name="username" placeholder="用户名" value="" lay-verify="required" disableautocomplete lay-verType="tips" type="text" autocomplete="off">
+                </div>
+                <div class="layui-form-item myPosition">
+                    <img src="statics/login/lock.png" alt="">
+                    <input class="layui-input" name="password" placeholder="密码" value=""  lay-verify="required|pwd" disableautocomplete  lay-verType="tips"  type="password" autocomplete="off">
+                </div>
+                <div class="layui-form-item myPosition">
+                    <a href="#" id="toLogin" style="color: #009688;font-size: 13px;">用户登录</a>
+                </div>
+                <button class="layui-btn login_btn" lay-submit="" lay-filter="login">登录</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="statics/libs/jquery-1.10.2.min.js"></script>
+<!--<script type="text/javascript" src="statics/js/jquery.extend.js"></script>-->
+<script type="text/javascript" src="statics/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="statics/js/md5.js"></script>
+<script type="text/javascript" src="statics/js/common.js"></script>
+<script type="text/javascript" src="statics/js/adminLogin.js"></script>
+
+</body>
+</html>

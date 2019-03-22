@@ -1,0 +1,75 @@
+
+<html>
+    <head>
+        <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../statics/plugins/layer/layer.js"></script>
+        <script src="../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../statics/css/videoList.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <form class="layui-form" action="">
+        </form>
+    </div>
+
+    <div class="layui-card mgt0">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../statics/images/videoList/Shape2.png" alt="">
+                <span class="carFont">数据列表</span>
+            </div>
+            <!--<div class=" flexRight">-->
+
+                <!--<form action="" class="layui-form">-->
+                    <!--<button id="btnAdd" class="layui-btn layui-btn-green myBtn" data-url="page/systemSetting/roleManage/add.html" title="添加角色">-->
+                        <!--添加-->
+                    <!--</button>-->
+                    <!--<div class="layui-input-inline" style="width:100px;">-->
+                        <!--<select>-->
+                            <!--<option value="">批量导入</option>-->
+                            <!--<option value="0">北京</option>-->
+                            <!--<option value="1">上海</option>-->
+                            <!--<option value="2">广州</option>-->
+                            <!--<option value="3">深圳</option>-->
+                            <!--<option value="4">杭州</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="layui-input-inline" style="width:100px;">-->
+                        <!--<select>-->
+                            <!--<option value="">排列方式</option>-->
+                            <!--<option value="0">北京</option>-->
+                            <!--<option value="1">上海</option>-->
+                            <!--<option value="2">广州</option>-->
+                            <!--<option value="3">深圳</option>-->
+                            <!--<option value="4">杭州</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+        </div>
+        <div class="layui-card-body">
+
+            <table class="layui-hide" id="test" lay-filter="test"></table>
+            <script type="text/html" id="switchTpl">
+                <input type="checkbox" name="status" lay-event="changeStatus" data-id="{{d.id}}"
+                       value="{{d.status}}" {{d.status== 1 ? 'checked' : '' }}  lay-skin="switch"  lay-text="ON|OFF" lay-filter="sexDemo">
+            </script>
+
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs cy-page" lay-event="show" data-url="page/video/showKeywordsDetail.html" title="查询关键词">查看</a>
+            </script>
+
+        </div>
+    </div>
+
+    <script src="../../statics/js/common.js"></script>
+    <script src="../../statics/js/keywordsList.js"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="157px" height="116px" viewBox="0 0 157 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="视觉规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="北京邮政后台规范" transform="translate(-933.000000, -1369.000000)">
+            <g id="Group-7" transform="translate(933.000000, 1369.000000)">
+                <rect id="Rectangle-4" fill="#CADBD4" fill-rule="nonzero" x="0" y="0" width="157" height="116" rx="8"></rect>
+                <g id="Group-6" transform="translate(64.000000, 12.000000)" fill-rule="nonzero">
+                    <circle id="Oval" fill="#1D744E" cx="15" cy="15" r="15"></circle>
+                    <rect id="Rectangle-5" fill="#FFFFFF" x="6" y="14" width="18" height="2" rx="1"></rect>
+                    <rect id="Rectangle-5-Copy" fill="#FFFFFF" transform="translate(15.000000, 15.000000) rotate(-270.000000) translate(-15.000000, -15.000000) " x="6" y="14" width="18" height="2" rx="1"></rect>
+                </g>
+                <text id="上传图片" font-family="PingFang-SC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#666666">
+                    <tspan x="51" y="63">上传图片</tspan>
+                </text>
+                <text id="图片建议尺寸为-400*300px" font-family="MicrosoftYaHei, Microsoft YaHei" font-size="12" font-weight="normal" fill="#979797">
+                    <tspan x="37" y="85">图片建议尺寸为</tspan>
+                    <tspan x="48.2851562" y="101">400*300px</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

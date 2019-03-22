@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoDetail.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <div>账户设置</div>
+        </div>
+        <div class="layui-row mgt20 mb18">
+            <div class="layui-col-md4 layui-col-sm4 layui-col-xs4 layui-col-md-offset4 layui-col-xs-offset4">
+                <div class="pic-box tc" style="padding-left: 80px;">
+                    <img src="../../../statics/images/user_pic.png" alt="">
+                </div>
+                <form class="layui-form" action="" lay-filter="myform" method="post">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">*用户名</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">*Email</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="email" required lay-verify="email" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">*旧密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="oldPassword" required lay-verify="required" placeholder="请输入旧密码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">*新密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="newPassword" required lay-verify="required" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">*确认密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请输入确认密码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formSubmit">保存</button>
+                            <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../../statics/js/systemSetting/account/main.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,103 @@
+
+<html>
+    <head>
+        <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../statics/plugins/layer/layer.js"></script>
+        <script src="../../statics/plugins/layui/layui.js"></script>
+        <script src="../../statics/plugins/ztree/jquery.ztree.all.min.js"></script>
+        <link rel="stylesheet" href="../../statics/plugins/ztree/css/metroStyle/metroStyle.css">
+        <script src="../../common/js/treeTool.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../statics/css/videoDetail.css">
+    </head>
+    <style>
+        .pidCode{
+            margin-left: 10px;
+        }
+    </style>
+    <body>
+    <div class="layui-card">
+        <form action=""  id="roleForm" class="layui-form" lay-filter="myform">
+            <div class="layui-card-body">
+    
+                <div class="cardOne mt24">
+                    <div class="oneHeard">
+                        <div class="oneLeft">
+                            <span>操作人：</span>
+                            <span id="userName">admin  </span>
+                            <span>|</span>
+                            <span id="orgName">系统管理员</span>
+                        </div>
+                        <div class="oneRight">
+                            <span>日期：</span>
+                            <span id="nowDate">2018-8-21</span>
+                        </div>
+                    </div>
+                    <div class="OneBody mt24">
+                        <div class="oneBody">
+                            <ul class="myTable">
+                               <li class="layui-row">
+                                   <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*分类名称</div>
+                                   <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="id"  autocomplete="off" class="layui-hide">
+                                        <input type="text" name="typeCode" id="typeCodeDe"  autocomplete="off" class="layui-hide">
+                                        <input type="text"  name="name" id="name"  lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+                                   </div>
+                               </li>
+                               <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*上级分类</div>
+                                   <div class="layui-form-item m0 layui-col-md6 layui-col-sm6" >
+                                       <select id="pid" name="pid" lay-filter="pid">
+
+                                       </select>
+                                   </div>
+                                   <div class="layui-inline layui-col-md4 layui-col-sm4 pdl60 g-text-aux">不选择默认为一级分类</div>
+
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*分类代码</div>
+                                    <div class="layui-form-item m0 layui-col-md9 layui-col-sm6" >
+                                        <div id="typeCodeBefore" class="layui-inline"></div>
+                                        <div class="layui-inline" id="typeCodeInline">
+                                            <input type="text" id="typeCode" lay-verify="required" placeholder="分类代码" autocomplete="off" class="layui-input">
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">分类依据</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="typeMark"  placeholder="请输入分类依据" autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">备注</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="remark"  placeholder="请输入备注" autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="layui-form-item mt34">
+                    <div class="layui-input-block bodyBtn">
+                        <button id="submit" class="layui-btn" lay-submit lay-filter="formSubmit">保存并提交</button>
+                        <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div><script src="../../statics/js/component.js"></script>
+    <script src="../../statics/js/common.js"></script>
+    <script src="../../statics/js/addVideoType.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,91 @@
+
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/tjEchart.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../statics/plugins/echarts/echarts.js"></script>
+    <script src="../../statics/js/echartsModel.js"></script>
+</head>
+<body>
+<div class="layui-card">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <span class="carFont">采集类型统计</span>
+            </div>
+            <div class=" flexRight ">
+                <button class="layui-btn layui-btn-green myBtn layui-hide" id="report1">
+                    导出数据
+                </button>
+                <button class="layui-btn searchBtn myBtn active" id="last7_1">
+                    最近7天
+                </button>
+                <button class="layui-btn searchBtn myBtn" id="last30_1">
+                    最近30天
+                </button>
+                <div class="layui-inline" style="height: 32px">
+                    <input type="text" id="time1" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+            <div class="layui-row">
+                <div class="layui-col-md6 layui-col-sm6">
+                    <table class="layui-hide" id="test1"></table>
+                </div>
+                <div class="layui-col-md6 layui-col-sm6">
+                    <div id="mainPie"></div>
+                </div>
+                <div class="layui-col-md12 layui-col-sm12">
+                    <div id="mainLine"></div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+
+<div class="layui-card">
+    <div class="layui-card-header">
+        <div class="flexLeft">
+            <span class="carFont">部门数据统计</span>
+        </div>
+        <div class=" flexRight">
+            <button class="layui-btn layui-btn-green myBtn" id="report2">
+                导出数据
+            </button>
+            <button class="layui-btn searchBtn1 myBtn active" id="last7_2">
+                最近7天
+            </button>
+            <button class="layui-btn searchBtn1 myBtn" id="last30_2">
+                最近30天
+            </button>
+            <div class="layui-inline" style="height: 32px">
+                <input type="text" id="time2" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-card-body">
+
+        <div class="layui-col-md12 layui-col-sm12">
+            <div id="mainBye"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/videoCj.js"></script>
+</body>
+</html>

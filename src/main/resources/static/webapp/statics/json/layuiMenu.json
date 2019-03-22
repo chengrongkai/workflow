@@ -1,0 +1,653 @@
+{
+  "menuList": [
+    {
+      "children": null,
+      "icon": "fa fa-tachometer",
+      "list": [
+        {
+          "children": null,
+          "icon": "fa fa-font",
+          "list": null,
+          "name": "字体",
+          "type": 1,
+          "url": "frontframe/basic/font.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-square",
+          "list": null,
+          "name": "按钮",
+          "type": 1,
+          "url": "frontframe/basic/button.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-strikethrough",
+          "list": null,
+          "name": "图标",
+          "type": 1,
+          "url": "frontframe/basic/icon.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "表格",
+          "type": 1,
+          "url": "frontframe/basic/table.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "列表",
+          "type": 1,
+          "url": "page/video/videoList.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "图表",
+          "type": 1,
+          "url": "page/echarts/tjEchart.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "流程配置",
+          "type": 1,
+          "url": "page/process/processConfig.html"
+        }
+      ],
+      "name": "基本元素",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-tachometer",
+      "list": [
+        {
+          "children": null,
+          "icon": "fa fa-font",
+          "list": null,
+          "name": "文献工作台",
+          "type": 1,
+          "url": "page/literature/workbench.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-square",
+          "list": null,
+          "name": "按钮",
+          "type": 1,
+          "url": "frontframe/basic/button.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-strikethrough",
+          "list": null,
+          "name": "图标",
+          "type": 1,
+          "url": "frontframe/basic/icon.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "表格",
+          "type": 1,
+          "url": "frontframe/basic/table.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "列表",
+          "type": 1,
+          "url": "page/video/videoList.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "图表",
+          "type": 1,
+          "url": "page/echarts/tjEchart.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-table",
+          "list": null,
+          "name": "流程配置",
+          "type": 1,
+          "url": "page/process/processConfig.html"
+        }
+      ],
+      "name": "文献",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-window-restore",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "alert弹窗",
+          "type": 1,
+          "url": "frontframe/layer/alert.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "msg短信息",
+          "type": 1,
+          "url": "frontframe/layer/msg.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "tips吸附",
+          "type": 1,
+          "url": "frontframe/layer/tips.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "load加载层",
+          "type": 1,
+          "url": "frontframe/layer/load.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "弹出页面",
+          "type": 1,
+          "url": "frontframe/layer/page.html"
+        }
+      ],
+      "name": "弹窗",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-css3",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "前台js工具方法",
+          "type": 1,
+          "url": "frontframe/basic/tools.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "前台css常用类",
+          "type": 1,
+          "url": "frontframe/basic/css.html"
+        }
+      ],
+      "name": "常用工具类",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-pie-chart",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "ECharts",
+          "type": 1,
+          "url": "frontframe/widget/chart.html"
+        }
+      ],
+      "name": "图表",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-cloud-upload",
+      "name": "上传控件",
+      "type": 0,
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "layui上传组件",
+          "type": 1,
+          "url": "frontframe/widget/uploadTool.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "百度上传控件",
+          "type": 1,
+          "url": "frontframe/widget/webuploader.html"
+        }
+      ],
+      "url": ""
+    },
+    {
+      "children": null,
+      "icon": "fa fa-wpforms",
+      "name": "表单元素",
+      "type": 0,
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "单选框",
+          "type": 1,
+          "url": "frontframe/widget/radioTool.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "复选框",
+          "type": 1,
+          "url": "frontframe/widget/checkboxTool.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "下拉框",
+          "type": 1,
+          "url": "frontframe/widget/selectTool.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "级联插件",
+          "type": 1,
+          "url": "frontframe/widget/linkSelectTool.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "下拉树",
+          "type": 1,
+          "url": "frontframe/widget/treeTool.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "星级插件",
+          "type": 1,
+          "url": "frontframe/widget/starTool.html"
+        }
+      ],
+      "url": ""
+    },
+    {
+      "children": null,
+      "icon": "fa fa-table",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "查询表单",
+          "type": 1,
+          "url": "frontframe/page/search.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "表格控件",
+          "type": 1,
+          "url": "frontframe/page/pageGrid.html"
+        },
+        {
+          "children": null,
+          "icon": "fa fa-pencil",
+          "list": null,
+          "name": "模板引擎",
+          "type": 1,
+          "url": "frontframe/page/tplTool.html"
+        }
+      ],
+      "name": "页面元素",
+      "type": 0,
+      "url": ""
+    },
+    {
+      "children": null,
+      "icon": "fa fa-product-hunt",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "登录页面",
+          "type": 1,
+          "url": "login.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "404页面",
+          "type": 1,
+          "url": "404.html"
+        }
+      ],
+      "name": "其他页面",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-address-card",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "增删改查",
+          "type": 1,
+          "url": "frontframe/demo/list.html"
+        }
+      ],
+      "name": "使用场景",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-address-card",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "展陈管理列表",
+          "type": 1,
+          "url": "page/Exhibition/videoList.html"
+        }
+      ],
+      "name": "展陈管理",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-address-card",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "藏品管理",
+          "type": 1,
+          "url":"page/public/collect/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "主题展管理",
+          "type": 1,
+          "url": "page/public/theme/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "邮票故事管理",
+          "type": 1,
+          "url": "page/public/story/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "资讯管理",
+          "type": 1,
+          "url": "page/public/message/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "学术研究管理",
+          "type": 1,
+          "url": "page/public/research/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "教育活动管理",
+          "type": 1,
+          "url": "page/public/education/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "公众用户管理",
+          "type": 1,
+          "url": "page/public/user/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "预约管理",
+          "type": 1,
+          "url": "page/public/preDeal/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "志愿者活动",
+          "type": 1,
+          "url": "page/public/young/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "公众策展管理",
+          "type": 1,
+          "url": "page/public/cezhan/list.html"
+        },{
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "集邮之家管理",
+          "type": 1,
+          "url": "page/public/stamp/list.html"
+        }
+      ],
+      "name": "公众服务管理",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-address-card",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "用户管理",
+          "type": 1,
+          "url": "page/systemSetting/userManage/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "部门管理列表",
+          "type": 1,
+          "url": "page/systemSetting/departManage/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "角色管理",
+          "type": 1,
+          "url": "page/systemSetting/roleManage/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "系统日志",
+          "type": 1,
+          "url": "page/systemSetting/log/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "存储备份",
+          "type": 1,
+          "url": "page/systemSetting/save/list.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "账户设置",
+          "type": 1,
+          "url": "page/systemSetting/account/main.html"
+        }
+      ],
+      "name": "系统管理",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children": null,
+      "icon": "fa fa-address-card",
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "社教管理",
+          "type": 1,
+          "url": "page/socialist/list.html"
+        }
+      ],
+      "name": "社教管理",
+      "type": 0,
+      "url": null
+    },
+    {
+      "children":null,
+      "icon":"fa fa-address-card",
+      "list":[
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"影视资料列表",
+          "type":1,
+          "url":"page/filmDataManage/data_manage/videoList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"资料查询列表",
+          "type":1,
+          "url":"page/filmDataManage/data_query/videoList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"申请管理列表",
+          "type":1,
+          "url":"page/filmDataManage/data_query/appManageList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"上传审批列表",
+          "type":1,
+          "url":"page/filmDataManage/examine_manage/videoList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"查询审批列表",
+          "type":1,
+          "url":"page/filmDataManage/examine_manage/queryExamineList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"关键词列表",
+          "type":1,
+          "url":"page/filmDataManage/keyword_manage/videoList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"分类设置",
+          "type":1,
+          "url":"page/filmDataManage/classify_setting/videoList.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"版权设置",
+          "type":1,
+          "url":"page/filmDataManage/copyright_setting/copyright_setting.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"影视采集统计",
+          "type":1,
+          "url":"page/filmDataManage/collect_staticstics/tjEchart.html"
+        },
+        {
+          "children":null,
+          "icon":"",
+          "list":null,
+          "name":"影视查询统计",
+          "type":1,
+          "url":"page/filmDataManage/query_staticstics/tjEchart.html"
+        }
+      ],
+      "name":"影视资料管理",
+      "type":0,
+      "url":null
+    }
+  ],
+  "code": 0
+}
+

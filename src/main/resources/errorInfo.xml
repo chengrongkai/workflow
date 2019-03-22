@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="errorInfos" class="com.tj720.entity.utils.ErrorInfos">
+		<property name="errMsgs">
+			<map>
+				<entry key="000001" value="系统未知错误" />
+				<entry key="000002" value="重复的errorCode" />
+				<entry key="000003" value="权限不足或登录超时，操作失败！" />
+				<entry key="000004" value="重复的接口url地址！(同一模块下不允许重复的url)" />
+				<entry key="000005" value="接口url不能为空！" />
+				<entry key="000006" value="重复的key！" />
+				<entry key="000007" value="请输入访问密码" />
+				<entry key="000008" value="数据类型有误" />
+				<entry key="000009" value="系统数据，不允许删除" />
+				<entry key="000010" value="验证码输入有误" />
+				<entry key="000011" value="图形验证码已失效，请刷新验证码" />
+				<entry key="000012" value="查找数据失败" />
+				<entry key="000013" value="该账户已冻结" />
+				<entry key="000014" value="用密码有误" />
+				<entry key="000015" value="用户名已被使用，请更换用户名" />
+				<entry key="000016" value="文件地址不能为空" />
+				<entry key="000017" value="文件名有误，无法识别的版本号：文件必须包含“.CAV.文件标识.版本号”" />
+				<entry key="000018" value="文件标识有误，更新文件时，文件名必须包含“.CAV.文件标识.版本号”，且【文件标识】必须和原文件相同" />
+				<entry key="000019" value="文件版本号已经过期，请重新下载文件编辑后再上传" />
+				<entry key="000020" value="参数有误，查询失败" />
+				<entry key="000021" value="登录超时" />
+				<entry key="000022" value="权限不足" />
+				<entry key="000023" value="子模块数量大于0，不允许删除该模块" />
+				<entry key="000024" value="接口数量大于0，不允许删除该模块" />
+				<entry key="000025" value="子菜单数量大于0，不允许删除该菜单" />
+				<entry key="000026" value="GitHub授权登陆异常" />
+				<entry key="000027" value="模块的父项目不能为模块自身" />
+				<entry key="000028" value="账号含有非法字符，账号只能为大小写字母、-、_、.及数字组合，长度5-20位" />
+				<entry key="000029" value="参数有误，操作失败" />
+				<entry key="000030" value="该邮箱尚未注册，操作失败" />
+				<entry key="000031" value="邮箱验证码有误，请重新发送验证码" />
+				<entry key="000032" value="邮箱格式不正确能" />
+				<entry key="000033" value="错误码数量大于0，不允许删除该模块" />
+				<entry key="000034" value="模块文章数量大于0，不允许删除该模块" />
+				<entry key="000035" value="模块资源数量大于0，不允许删除该模块" />
+				<entry key="000036" value="模块数据字典数量大于0，不允许删除该模块" />
+				<entry key="000037" value="评论数量大于0，不允许删除该文章" />
+				<entry key="000038" value="项目成员大于0，不允许删除项目" />
+				<entry key="000039" value="成员已存在，不允许重复添加" />
+				<entry key="000040" value="用户不存在" />
+				<entry key="000041" value="私有项目，必须登录才能访问" />
+				<entry key="000042" value="权限不够，禁止访问该项目" />
+				<entry key="000043" value="站内搜索/全文检索需要登陆后方可使用" />
+				<entry key="000044" value="非公开项目不支持静态化"/>
+				<entry key="000045" value="地址有误，静态化失败，请确认配置文件config.properties中的网站域名配置是否正确！"/>
+				<entry key="000046" value="SQL格式有误，必须以create开头"/>
+				
+				<!-- mip数据 -->
+				<entry key="111112" value="已发布数据，不允许删除" />
+				<entry key="111113" value="预览失败,联系管理员" />
+				<entry key="111114" value="已发布数据，不允许修改" />
+				<entry key="111115" value="没有该条数据,请核对后进行操作或与管理员联系" />
+				<entry key="111116" value="数据异常,请与管理员联系" />
+				<entry key="111117" value="导入数据不符合规则！" />
+				<entry key="111118" value="库存数量不足！" />
+				<entry key="111119" value="该文献已借出！" />
+				<entry key="111120" value="该文献已归还！" />
+				<!-- 角色管理 -->
+				<entry key="200001" value="角色编码已存在，不允许新增" />
+				<entry key="200002" value="角色不存在,无法修改" />
+				<entry key="200003" value="角色不存在,无法删除" />
+				<entry key="200004" value="角色新增失败,联系管理员" />
+				<entry key="200005" value="角色修改失败,联系管理员" />
+				<entry key="200006" value="角色删除失败,联系管理员" />
+				<entry key="200007" value="角色编码为空，不允许操作" />
+				<entry key="200008" value="角色ID为空，不允许操作" />
+				<entry key="200009" value="角色查询失败,联系管理员" />
+				<!-- 角色管理 -->
+
+				<!-- 角色关联管理 -->
+				<entry key="200101" value="关联对象为空，不允许操作" />
+				<entry key="200102" value="关联对象不存在,无法修改" />
+				<entry key="200103" value="关联对象不存在,无法删除" />
+				<entry key="200104" value="关联对象新增失败,联系管理员" />
+				<entry key="200105" value="关联对象修改失败,联系管理员" />
+				<entry key="200106" value="关联对象删除失败,联系管理员" />
+				<entry key="200109" value="关联对象查询失败,联系管理员" />
+				<entry key="200110" value="关联对象已存在,无法新增" />
+				<!-- 角色关联管理-->
+
+				<!-- 功能管理 -->
+				<entry key="200201" value="功能名称已存在，不允许新增" />
+				<entry key="200202" value="功能不存在,无法修改" />
+				<entry key="200203" value="功能不存在,无法删除" />
+				<entry key="200204" value="功能新增失败,联系管理员" />
+				<entry key="200205" value="功能修改失败,联系管理员" />
+				<entry key="200206" value="功能删除失败,联系管理员" />
+				<entry key="200207" value="功能名称为空，不允许操作" />
+				<entry key="200208" value="功能ID为空，不允许操作" />
+				<entry key="200209" value="功能查询失败,联系管理员" />
+				<!-- 功能管理 -->
+
+				<!-- 功能权限管理 -->
+				<entry key="200301" value="功能权限为空，不允许操作" />
+				<entry key="200302" value="功能权限不存在,无法修改" />
+				<entry key="200303" value="功能权限不存在,无法删除" />
+				<entry key="200304" value="功能权限新增失败,联系管理员" />
+				<entry key="200305" value="功能权限修改失败,联系管理员" />
+				<entry key="200306" value="功能权限删除失败,联系管理员" />
+				<entry key="200309" value="功能权限查询失败,联系管理员" />
+				<entry key="200310" value="功能权限已存在,无法新增" />
+				<!-- 功能权限管理-->
+
+				<!-- 登录管理 -->
+				<entry key="10000001" value="用户名为空，不允许登录" />
+				<entry key="10000002" value="密码为空,不允许登录" />
+				<entry key="10000003" value="您频繁登录，ip登录受限！" />
+				<entry key="10000004" value="用户名或密码错误" />
+				<entry key="10000005" value="用户名或密码错误" />
+				<entry key="10000006" value="用户名或密码错误" />
+				<entry key="10000007" value="验证码为空" />
+				<entry key="10000008" value="验证码不正确" />
+				<entry key="10000009" value="用户名或密码错误" />
+				<entry key="10000010" value="用户名或密码错误" />
+				<entry key="10000011" value="用户名或密码错误" />
+				<entry key="10000012" value="用户名或密码不符合要求" />
+				<entry key="10000013" value="抱歉,单点登录失败,参数有误!" />
+				<entry key="10000014" value="抱歉,单点登录失败,用户名不存在!" />
+				<entry key="10000015" value="抱歉,单点登录失败,系统异常!" />
+				<!-- 登录管理-->
+
+				<!-- 用户管理 -->
+				<entry key="20000001" value="用户名或密码错误" />
+				<entry key="20000002" value="用户名重复，请更换用户名" />
+				<entry key="20000003" value="系统错误，请联系管理员" />
+				<entry key="20000004" value="密码错误,登录失败" />
+				<entry key="20000005" value="用户名不存在" />
+				<entry key="20000006" value="用户新增失败，请联系管理员" />
+				<entry key="20000007" value="修改失败，请联系管理员" />
+				<entry key="20000008" value="用户名或密码错误" />
+				<entry key="20000009" value="用户编辑失败，请联系管理员" />
+				<entry key="20000010" value="修改用户名不能为空" />
+				<entry key="20000011" value="旧密码输入错误！" />
+				<entry key="20000012" value="用户删除失败，请联系管理员" />
+				<entry key="20000013" value="用户名或密码错误" />
+				<entry key="20000014" value="该手机号不存在或未注册吧" />
+				<entry key="20000015" value="验证码发送错误" />
+				<entry key="20000016" value="注册用户错误" />
+				<entry key="20000017" value="手机号发送错误" />
+				<entry key="20000018" value="验证码发送错误" />
+				<entry key="20000019" value="信息发送错误" />
+				<entry key="20000020" value="修改密码错误" />
+				<entry key="20000021" value="用户名或密码错误" />
+				<entry key="20000022" value="用户名为空，不允许新增" />
+				<entry key="20000023" value="用户名或密码错误" />
+
+				<!-- 用户管理-->
+
+				<entry key="200504" value="新增失败,联系管理员" />
+				<entry key="200505" value="修改失败,联系管理员" />
+				<entry key="200506" value="删除失败,联系管理员" />
+				<entry key="200507" value="查询失败,联系管理员" />
+				<entry key="200510" value="参数有误,联系管理员" />
+				<entry key="200511" value="操作对象不存在,不允许操作" />
+
+				<entry key="200508" value="影视资料名称重复,不允许新增" />
+				<entry key="200509" value="影视资料code重复,不允许新增" />
+				<entry key="200512" value="分类名称重复,不允许新增" />
+				<entry key="200513" value="典藏精选不能超过三次" />
+				<!--展陈管理-->
+				<entry key="30000013" value="新增展陈失败！" />
+
+				<entry key="30000014" value="批量删除展陈失败！" />
+
+				<entry key="30000015" value="展陈信息查询失败！" />
+
+				<!--展陈管理-->
+
+				<!--藏品管理-->
+				<entry key="40000012" value="藏品名称已存在" />
+
+				<entry key="40000013" value="新增藏品失败！" />
+
+				<entry key="40000014" value="批量删除藏品失败！" />
+
+				<entry key="40000015" value="藏品信息查询失败！" />
+
+				<entry key="40000016" value="修改藏品失败！" />
+
+				<entry key="40000017" value="藏品推荐失败！" />
+
+				<entry key="40000018" value="删除藏品失败！" />
+
+				<entry key="40000019" value="字段为空" />
+
+				<entry key="40000020" value="数据为空" />
+
+				<entry key="40000021" value="修改失败" />
+
+				<!--藏品管理-->
+
+				<!--主题展管理-->
+				<entry key="50000012" value="首页推荐失败，最多只能选中一项！" />
+				<entry key="50000013" value="精选专题推荐失败，最多只能选中3项！" />
+
+				<!--邮政故事管理-->
+				<entry key="60000012" value="邮政故事数据为空" />
+				<entry key="60000013" value="新增邮政故事失败" />
+				<entry key="60000014" value="修改邮政故事失败" />
+				<entry key="60000015" value="删除邮政故事失败" />
+				<entry key="60000016" value="批量删除邮政故事失败" />
+
+
+
+				<!--资讯管理-->
+				<entry key="70000012" value="资讯管理数据为空" />
+				<entry key="70000013" value="新增资讯管理失败" />
+				<entry key="70000014" value="修改资讯管理失败" />
+				<entry key="70000015" value="删除资讯管理失败" />
+				<entry key="70000016" value="批量删除资讯管理失败" />
+
+
+
+				<!--集邮之家管理-->
+				<entry key="80000012" value="集邮之家数据为空" />
+				<entry key="80000013" value="新增集邮之家失败" />
+				<entry key="80000014" value="修改集邮之家失败" />
+				<entry key="80000015" value="删除集邮之家失败" />
+				<entry key="80000016" value="批量删除集邮之家失败" />
+
+
+
+				<!--公众策展管理-->
+				<entry key="90000012" value="公众策展数据为空" />
+				<entry key="90000013" value="新增公众策展失败" />
+				<entry key="90000014" value="修改公众策展失败" />
+				<entry key="90000015" value="删除公众策展失败" />
+				<entry key="90000016" value="批量删除公众策展失败" />
+
+
+
+				<!--预约管理-->
+				<entry key="100000012" value="预约管理数据为空" />
+				<entry key="100000013" value="新增预约管理失败" />
+				<entry key="100000014" value="修改预约管理失败" />
+				<entry key="100000015" value="删除预约管理失败" />
+				<entry key="100000016" value="批量删除预约管理失败" />
+
+
+
+
+				<!--学术研究管理-->
+				<entry key="41000012" value="学术研究名称已存在" />
+
+				<entry key="41000013" value="新增学术研究失败！" />
+
+				<entry key="41000014" value="批量删除学术研究失败！" />
+
+				<entry key="41000015" value="学术研究信息查询失败！" />
+
+				<entry key="41000016" value="修改学术研究失败！" />
+
+				<entry key="41000017" value="学术研究推荐失败！" />
+
+				<entry key="41000018" value="删除学术研究失败！" />
+
+				<entry key="41000019" value="字段为空" />
+
+				<entry key="41000020" value="数据为空" />
+
+				<!--学术研究管理-->
+
+
+				<!--影视资料管理-->
+				<entry key="51000001" value="您已提交过该申请，不允许再次提交" />
+				<!--影视资料管理-->
+
+				<entry key="51000002" value="设置失败" />
+				<entry key="51000003" value="查询失败" />
+
+
+				<!--注册管理-->
+				<entry key="110000001" value="请输入手机号！" />
+				<entry key="110000002" value="手机号已被占用！" />
+				<entry key="110000003" value="验证码发送失败，请联系管理员！" />
+				<entry key="110000004" value="请输入用户名称！"/>
+				<entry key="110000005" value="请输入短信验证码！"/>
+				<entry key="110000006" value="请输入登陆密码！"/>
+				<entry key="110000007" value="请再次输入登陆密码" />
+				<entry key="110000008" value="用户名已被占用！"/>
+				<entry key="110000009" value="未发送短信验证码！"/>
+				<entry key="110000010" value="短信验证码错误！"/>
+				<entry key="110000011" value="密码长度错误，应为6至20位！"/>
+				<entry key="110000012" value="两组密码不匹配！"/>
+				<entry key="110000013" value="短信验证码已过期！"/>
+				<entry key="110000014" value="手机号格式有误！"/>
+				<entry key="110000015" value="新增用户失败！"/>
+				<entry key="110000036" value="请输入与原密码不同的新密码！"/>
+				<!--注册管理-->
+
+                <!--用户信息管理-->
+                <entry key="110000016" value="性别不能为空！"/>
+                <entry key="110000017" value="生日不能为空！"/>
+                <entry key="110000018" value="城市不能为空！"/>
+                <entry key="110000019" value="职业不能为空！"/>
+                <entry key="110000020" value="个性签名不能为空！"/>
+                <entry key="110000021" value="修改手机号失败！"/>
+                <entry key="110000022" value="修改信息失败！"/>
+                <entry key="110000023" value="个性签名至少10个字!"/>
+                <entry key="110000024" value="密码修改失败!"/>
+                <entry key="110000025" value="手机号未注册！"/>
+				<entry key="110000026" value="请输入原密码！"/>
+				<entry key="110000027" value="请输入新密码！"/>
+				<entry key="110000028" value="请再次输入新密码" />
+				<entry key="110000029" value="新旧密码不能一致" />
+				<entry key="110000030" value="用户不存在！" />
+				<entry key="110000031" value="输入的原密码不正确！" />
+                <!--用户信息管理-->
+
+				<!--志愿者活动-->
+				<entry key="120000001" value="活动添加失败"/>
+				<entry key="120000002" value="活动名不能为空"/>
+				<entry key="120000003" value="活动地点不能为空"/>
+				<entry key="120000004" value="活动开始时间不能为空"/>
+				<entry key="120000005" value="活动结束时间不能为空"/>
+				<entry key="120000006" value="活动报名截止时间不能为空"/>
+				<entry key="120000007" value="需求人数必须为正整数"/>
+				<entry key="120000008" value="活动封面图片不能为空"/>
+				<entry key="120000009" value="活动修改失败"/>
+				<entry key="120000010" value="姓名不能为空"/>
+				<entry key="120000011" value="手机号不能为空"/>
+				<entry key="120000012" value="年龄不能为空"/>
+				<entry key="120000013" value="职业不能为空"/>
+				<entry key="120000014" value="申请原因不能为空"/>
+				<entry key="120000015" value="新增申请失败"/>
+                <entry key="120000016" value="活动报名已截止"/>
+				<entry key="120000017" value="该手机号已报名"/>
+				<!--志愿者活动-->
+
+				<!--在线策展-->
+				<entry key="130000001" value="展陈名称不能为空！"/>
+				<entry key="130000002" value="展陈简介不能为空！"/>
+				<entry key="130000003" value="请上传陈展主图！"/>
+				<entry key="130000004" value="请添加藏品！"/>
+				<entry key="130000005" value="在线策展添加失败！"/>
+				<entry key="130000006" value="请选择藏品分类！"/>
+				<!--在线策展-->
+
+				<!--收藏-->
+				<entry key="140000001" value="添加收藏失败！"/>
+				<entry key="140000002" value="取消收藏失败！"/>
+				<entry key="140000003" value="系统异常！"/>
+				<entry key="140000004" value="参数有误！"/>
+				<entry key="140000005" value="不允许重复收藏！"/>
+				<entry key="140000006" value="数据异常！"/>
+
+				<!--外部藏品接口-->
+				<entry key="150000001" value="查询异常，请联系管理员！"/>
+				<entry key="150000002" value="网络异常，请联系管理员！"/>
+				<!--外部藏品接口-->
+            </map>
+		</property>
+	</bean>
+</beans>

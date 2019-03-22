@@ -1,0 +1,54 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoList.css">
+    </head>
+    <body>
+        
+    <div class="layui-card">
+        <form class="layui-form" action="">
+        </form>
+    </div>
+    
+    <div class="layui-card mgt0">
+        <div class="layui-card-header">
+            <div class="flexLeft">
+                <img src="../../statics/images/videoList/Shape2.png" alt="">
+                <span class="carFont">数据列表</span>
+            </div>
+            <!-- <div class="layui-btn-group flexRight pdt15">
+                <button class="layui-btn layui-btn-green myBtn">
+                    开始备份
+                </button>
+            </div> -->
+        </div>
+        <div class="layui-card-body">
+    
+            <table class="layui-hide" id="test" lay-filter="test"></table>
+            
+            <script type="text/html" id="toolbarDemo">
+                <div class="layui-btn-container">
+                    <button class="layui-btn layui-btn-sm layui-hide" id="back" lay-event="getCheckData">开始备份</button>
+                </div>
+            </script>
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="reback">恢复</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+        </div>
+    </div>
+    
+    <script src="../../statics/js/systemSetting/save/list.js"></script>
+    </body>
+</html>
+    

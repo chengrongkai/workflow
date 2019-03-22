@@ -1,0 +1,331 @@
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../statics/css/h_common.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/videoDetail.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script src="../../statics/plugins/echarts/echarts.js"></script>
+    <style>
+        .oneBody .layui-row>div{
+            height:auto !important;
+        }
+
+        .imgList{
+
+        }
+        .imgList:after{
+            content:".";
+            display:block;
+            height:0;
+            clear:left;
+            visibility:hidden;
+        }
+        .imgItem{
+            width: 150px;
+            height: 170px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .imgItem img{
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+        .imgItem p{
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            text-align: center;
+        }
+
+        .layui-input-block {
+             margin-left: auto;
+            /*min-height: 36px;*/
+        }
+    </style>
+</head>
+<body>
+<div class="layui-card">
+    <form action="" id="videoForm" class="layui-form">
+        <div class="layui-card-header h-apply-state-wrap">
+            <div class="flexLeft">
+                <div class="h-apply-state"><img src="" alt="">
+                    <span>资料审批：</span>
+                    <!--<span id="currentStatus"></span>-->
+                    <!--<span>当前资料状态：已发布（不公开）</span>-->
+                </div>
+            </div>
+            <!--<div class="flexRight">-->
+                <!--<a href="" class="h-apply-state" id="setAuthSetting">设置权限</a>&nbsp;-->
+                <!--<a href="" class="h-apply-state" id="editVideo" data-url="page/video/videoDetail.html" id="edit" title="上传资料-非影视部">编辑资料</a>-->
+                <!--<a href="" class="h-apply-state" data-url="page/video/videoApproval.html"  title="审批" id="approvalButton">审批</a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="layui-card-body">
+            <div class="cardOne mt24">
+                <div class="title"><img src="" alt=""><span>基本信息</span></div>
+
+                <div class="OneBody mt24">
+                    <div class="oneHeard">
+                        <div class="oneLeft">
+                            <span >操作人：</span>
+                            <span id="userName">admin</span>
+                            <span >|</span>
+                            <span id="orgName">系统管理员</span>
+                        </div>
+                        <div class="oneRight">
+                            <span>日期：</span>
+                            <span id="nowDate">2018-8-21</span>
+                        </div>
+                    </div>
+                    <div class="oneBody">
+                        <ul class="myTable">
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*资料编号</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="uploadOrg" id="uploadOrg"   autocomplete="off" class="layui-hide">
+                                    <input type="text" name="id" id="id"   autocomplete="off" class="layui-hide">
+                                    <input type="text" name="videoCode" id="videoCode" required disabled="disabled" lay-verify="required" placeholder="请输入资料编号" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*资料名称</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="videoName" required  lay-verify="required" disabled="disabled" placeholder="请输入资料名称" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">关键词</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="keywords"  placeholder="请输入关键词" disabled="disabled" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-inline layui-col-md4 layui-col-sm4 pdl60 g-text-aux">多个关键词,以;分隔</div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*资料类型</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <select name="videoType" id="videoType" lay-verify="required" disabled="disabled">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">存储格式</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <select name="saveType" id="saveType" disabled="disabled">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">时长</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="videoTime" required  lay-verify="required" disabled="disabled" placeholder="请输入时长" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">资料大小</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="videoSize"   lay-verify="required" disabled="disabled" placeholder="请输入资料大小" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*资料来源</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6" disabled="disabled">
+                                    <select name="source" id="source">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*形成时间</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="makeTime" id="makeTime" disabled="disabled" lay-verify="required" placeholder="请输入形成时间" autocomplete="off" class="layui-input">
+                                </div>
+
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">内容简介</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="content" disabled="disabled"  placeholder="请输入内容简介" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">备注</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="remark" disabled="disabled"  placeholder="请输入备注" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardOne mt24">
+                <div class="title"><img src="" alt=""><span>查看资料</span></div>
+
+                <div class="OneBody">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="mt24">
+                        <ul class="imgList">
+                            <!--<li class="imgItem" data-type="img">-->
+                            <!--<img src="" alt="">-->
+                            <!--<p class="myfont">开心的托马斯</p>-->
+                            <!--</li>-->
+                            <!--<li class="imgItem" data-type="video">-->
+                            <!--<img src="" alt="">-->
+                            <!--<p class="myfont">开心的托马斯</p>-->
+                            <!--</li>-->
+                            <!--<li class="imgItem" data-type="audio">-->
+                            <!--<img src="" alt="">-->
+                            <!--<p class="myfont">开心的托马斯</p>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardOne mt24">
+                <div class="title"><img src="" alt=""><span>资料标注</span></div>
+                <div class="OneBody">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="mt24">
+                        <p class="myfont">已添加标注信息如下</p>
+                        <div class="layui-row" style="height: 250px">
+                            <div class="layui-col-md10 layui-col-sm10">
+                                <table class="layui-table" id="comments" lay-filter="comments"></table>
+                                <script type="text/html" id="barDemo">
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardOne mt24 mb18">
+                <div class="title"><img src="" alt=""><span>编目信息</span></div>
+
+                <div class="OneBody mt24">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="oneBody mt24">
+                        <ul class="myTable">
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">资料分类</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <select name="videoMark" id="videoMark">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">关联主体</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="relativeObject" disabled="disabled" placeholder="请输入关联主体" autocomplete="off" class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR" style="height: 100px!important;">关联藏品</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <!--<input type="textarea" id="relativeCollection" name="relativeCollection" disabled="disabled"  placeholder="请输入关联藏品" autocomplete="off" class="layui-input">-->
+                                    <textarea id="relativeCollection" name="relativeCollection" disabled="disabled"  placeholder="请输入关联藏品" autocomplete="off" class="layui-textarea"></textarea>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardOne mt24 mb18">
+                <div class="title"><img src="" alt=""><span>申请内容</span></div>
+
+                <div class="OneBody mt24">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="oneBody mt24">
+                        <ul class="myTable">
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请人</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select  id="apply" disabled="disabled" name ="apply" lay-verify="required">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请部门</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select  id="applyOrg" disabled="disabled" name ="applyOrg" lay-verify="required">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请日期</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <input type="text" name="applyTime" disabled="disabled" id="applyTime" lay-verify="required"  autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*申请原因</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select  id="applyReason"  name ="applyReason" lay-verify="required">
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="layui-row">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">备注</div>
+                                <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                    <input type="text" name="remark" id="remark"  placeholder="请输入备注" autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </li>
+                            <li class="layui-row " id="approvalLi">
+                                <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*审批人</div>
+                                <div class="layui-form-item m0 layui-col-md3 layui-col-sm3">
+                                    <select name="approvalInfo" id="approval" lay-verify="required">
+
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item mt34">
+                <div class="layui-input-block bodyBtn">
+                    <button class="layui-btn" lay-submit lay-filter="saveAndSubmit" id="saveAndSubmit">保存并提交</button>
+                    <button class="layui-btn" lay-submit lay-filter="save" id="save">保存</button>
+                    <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/videoApply.js"></script>
+</body>
+</html>

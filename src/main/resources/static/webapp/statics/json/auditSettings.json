@@ -1,0 +1,54 @@
+{
+  "menuList": [
+    {
+      "children": null,
+      "icon": "fa fa-wpforms",
+      "name": "系统管理",
+      "type": 0,
+      "list": [
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "功能管理",
+          "type": 1,
+          "url": "page/menu/menuList.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "部门管理",
+          "type": 1,
+          "url": "page/menu/index.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "用户管理",
+          "type": 1,
+          "url": "frontframe/vue/radio.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "角色管理",
+          "type": 1,
+          "url": "frontframe/vue/checkbox.html"
+        },
+        {
+          "children": null,
+          "icon": "",
+          "list": null,
+          "name": "系统日志",
+          "type": 1,
+          "url": "frontframe/vue/select.html"
+        }
+      ],
+      "url": ""
+    }
+  ],
+  "code": 0
+}

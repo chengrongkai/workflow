@@ -1,0 +1,111 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+      <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoDetail.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <form action=""  class="layui-form" lay-filter="myform" method="post">
+            <div class="layui-card-body">
+    
+                <div class="cardOne mt24">
+    
+                    <div class="OneBody mt24">
+                        <div class="oneBody" style="padding-bottom: 30px">
+                            <ul class="myTable">
+                               <li class="layui-row">
+                                 <input type="text" style="visibility: hidden;display: none" autocomplete="off"/>
+                                 　　<input type="password" id="lueluelue" style="visibility: hidden;" autocomplete="off"/>
+                                   <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*用户名</div>
+                                   <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                           <input type="text" name="userName" required disabled lay-verify="required"
+                                                  placeholder="请输入用户名" disableautocomplete autocomplete="off" class="layui-input">
+                                   </div>
+                               </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*姓名</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="name" required disabled lay-verify="required"
+                                               placeholder="请输入姓名" disableautocomplete autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*邮箱地址</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="email" disabled="disabled" required lay-verify="required|email"  placeholder="请输入邮箱地址"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*联系电话</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="phone" disabled="disabled" required lay-verify="required|phone" placeholder="请输入联系电话" autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*部门</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <!--<select name="deptName" lay-verify="required" disabled>-->
+                                    <!---->
+                                        <!--</select>-->
+                                        <input type="text" name="deptName" required disabled placeholder="请输入角色"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*角色</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="roleName" required disabled placeholder="请输入角色"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*登陆密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="password" name="password" disableautocomplete required disabled placeholder="请输入登陆密码"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*确认密码</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="password" name="surePassword" disableautocomplete required disabled placeholder="请输入确认密码"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">备注</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="remark" disabled placeholder="请输入备注"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!--<div class="layui-form-item mt34">-->
+                    <!--<div class="layui-input-block bodyBtn">-->
+                        <!--<button class="layui-btn" lay-submit lay-filter="back">返回</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </form>
+    </div>
+    <script src="../../../statics/js/common.js"></script>
+    <script src="../../../statics/js/formatDatasUtil.js"></script>
+    <script src="../../../statics/js/systemSetting/userManage/detail.js"></script>
+    </body>
+</html>
+    

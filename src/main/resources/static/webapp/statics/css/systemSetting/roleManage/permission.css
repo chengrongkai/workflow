@@ -1,0 +1,15 @@
+.permission-body {
+    /* min-height: 400px; */
+}
+
+.permission-body .layui-card-header {
+    background-color: #f2f2f2;
+}
+
+.permission-body .tree-body {
+    min-height: 400px;
+}
+
+.check-all-box {
+    padding-top: 10px;
+}

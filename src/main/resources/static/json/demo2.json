@@ -1,0 +1,45 @@
+{
+  "code": 0
+,"msg": ""
+,"count": 30
+,"list": [{
+  "id": "10001"
+,"username":["杜甫","杜甫"]
+,"email": "xianxin@layui.com"
+,"sex": "男"
+,"city": "男"
+,"sign": "点击此处，显示更多。当内容超出时，点击单元格会自动显示更多内容。"
+,"experience": ["杜甫","杜甫"]
+,"ip": ["杜甫","杜甫"]
+,"logins": "108"
+ , "img":"../../../images/public/Group71.svg"
+,"joinTime": "2016-10-14",
+  "a1":["采集","发布"]
+}],
+  "data": [
+    {
+      "a1": "申请",
+      "username": "fa fa-font",
+      "experience": "文献工作台",
+      "ip": "page/literature/workbench.html"
+    },
+    {
+      "a1": "借阅",
+      "username": "fa fa-square",
+      "experience": "文献资料列表",
+      "ip": "page/literature/literatureManager.html"
+    },
+    {
+      "a1": "超期",
+      "username": "fa fa-square",
+      "experience": "文献资料列表",
+      "ip": "page/literature/literatureManager.html"
+    },
+    {
+      "a1": "归还",
+      "username": "fa fa-square",
+      "experience": "文献资料列表",
+      "ip": "page/literature/literatureManager.html"
+    }
+  ]
+}

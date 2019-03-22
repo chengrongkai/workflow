@@ -1,0 +1,105 @@
+<html>
+<head>
+    <script src="../../statics/libs/jquery-1.10.2.min.js"></script>
+    <script src="../../statics/js/jquery.extend.js"></script>
+    <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
+    <!--layui ztree样式-->
+    <link rel="stylesheet" href="../../statics/plugins/layui/css/layui.css" media="all">
+    <script src="../../statics/plugins/layer/layer.js"></script>
+    <script src="../../statics/plugins/layui/layui.js"></script>
+    <!--样式-->
+    <link rel="stylesheet" href="../../common/css/cyStyle.css">
+    <link rel="stylesheet" href="../../statics/css/h_common.css">
+    <link rel="stylesheet" href="../../common/css/cyType.css">
+    <link rel="stylesheet" href="../../statics/css/videoDetail.css">
+    <script src="../../statics/plugins/editgrid/plugin/My97DatePicker/WdatePicker.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script src="../../statics/plugins/echarts/echarts.js"></script>
+    <style>
+        .oneBody .layui-row>div{
+            height:auto !important;
+        }
+
+        .imgList{
+
+        }
+        .imgList:after{
+            content:".";
+            display:block;
+            height:0;
+            clear:left;
+            visibility:hidden;
+        }
+        .imgItem{
+            width: 150px;
+            height: 170px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .imgItem img{
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+        .imgItem p{
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            text-align: center;
+        }
+
+        .layui-input-block {
+             margin-left: auto;
+            /*min-height: 36px;*/
+        }
+    </style>
+</head>
+<body>
+<div class="layui-card">
+    <form action="" id="videoForm" class="layui-form">
+        <div class="layui-card-header h-apply-state-wrap">
+            <div class="flexLeft">
+                <div class="h-apply-state"><img src="" alt="">
+                    <span>查看</span>
+                    <span id="currentKeywords">当前关键词：已发布（不公开）</span>
+                </div>
+            </div>
+            <div class="flexRight">
+                <div class="h-apply-state"><img src="" alt="">
+                    <button id="print" class="layui-btn layui-btn-primary">打印</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+            <div class="cardOne mt24 mb18">
+                <div class="title"><img src="" alt=""><span>影视资料列表</span></div>
+                <div class="OneBody">
+                    <div class="oneHeard">
+
+                    </div>
+                    <div class="oneBody mt24">
+                        <div class="layui-row" >
+                            <div class="layui-col-md12 layui-col-sm12">
+                                <table class="layui-table" id="test" lay-filter="test"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-xs" lay-event="detail" data-url="page/video/videoShow.html" id="show" title="查看">查看</a>
+                <!--<a class="layui-btn download layui-btn-danger layui-btn-xs {{d.other3 != '0' ? 'layui-hide' : '' }}" data-id="{{d.id}}" id="download" title="下载" lay-event="download">下载</a>-->
+            </script>
+        </div>
+    </form>
+</div>
+
+<script src="../../statics/js/component.js"></script>
+<script src="../../statics/js/common.js"></script>
+<script src="../../statics/js/showKeywordsDetail.js"></script>
+</body>
+</html>

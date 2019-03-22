@@ -1,0 +1,88 @@
+body{overflow:hidden;}
+*{ outline: none; }
+input:-webkit-autofill {
+    z-index: 100;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    box-shadow: 0 0 0px 19px white inset;
+}
+.video-player{background-color: transparent;display: block;position: absolute;z-index: 1;top:0;}
+.video_mask{ width:100%; height:100%; position:absolute; left:0; top:0; z-index:90; background-color:rgba(0,0,0,0.2); }
+.layui-form{
+    height: 210px;
+    position: relative;
+}
+
+.login{ height:310px;width:330px;padding: 212px 155px 213px 115px;background:rgba(255,255,255,1);z-index:99;}
+.login h1{
+    height:30px;
+    font-size:22px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(29,116,78,1);
+    line-height:30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.form_code{ position:relative; }
+.form_code .code{ position:absolute; right:0; top:1px; cursor:pointer; }
+.login_btn{
+    width:330px;
+    height:44px;
+    background:rgba(29,116,78,1);
+    border-radius:31px;
+    position: absolute;
+    bottom: 0;
+}
+.myPosition{
+    position: relative;
+}
+.myPosition img{
+    position: absolute;
+    top: 6px;
+}
+.myPosition input{
+    border: none;
+    outline: none;
+    text-indent: 20px;
+    border-bottom:1px solid rgba(221,221,221,1);
+    background-color: white!important;
+}
+input{
+    background:none;
+    outline:none;
+    border:0px;
+}
+.back_bg{
+    background: url("../login/back_bg.png") center no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 980px;
+    max-height: 1080px;
+    margin: 0 auto;
+    position: relative;
+}
+.left{
+    height:735px;
+    width:600px;
+    position: relative;
+    background: url("../login/backLeft.png") center no-repeat;
+    background-size: cover;
+}
+.left img{
+    position: absolute;
+    left: 68px;
+    top: 68px;
+}
+.back_center{
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1200px;
+    height: 735px;
+}

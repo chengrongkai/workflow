@@ -1,0 +1,104 @@
+
+<html>
+    <head>
+        <script src="../../../statics/libs/jquery-1.10.2.min.js"></script>
+        <script src="../../../statics/js/jquery.extend.js"></script>
+        <link rel="stylesheet" href="../../../statics/css/font-awesome.min.css">
+        <!--layui ztree样式-->
+        <link rel="stylesheet" href="../../../statics/plugins/layui/css/layui.css" media="all">
+        <script src="../../../statics/plugins/layer/layer.js"></script>
+        <script src="../../../statics/plugins/layui/layui.js"></script>
+        <script src="../../../statics/plugins/ztree/jquery.ztree.all.min.js"></script>
+        <link rel="stylesheet" href="../../../statics/plugins/ztree/css/metroStyle/metroStyle.css">
+        <script src="../../../common/js/treeTool.js"></script>
+        <!--样式-->
+        <link rel="stylesheet" href="../../../common/css/cyStyle.css">
+        <link rel="stylesheet" href="../../../common/css/cyType.css">
+        <link rel="stylesheet" href="../../../statics/css/videoDetail.css">
+    </head>
+    <body>
+    <div class="layui-card">
+        <form action=""  id="roleForm" class="layui-form" lay-filter="myform">
+            <div class="layui-card-body">
+    
+                <div class="cardOne mt24">
+                    <div class="oneHeard">
+                        <div class="oneLeft">
+                            <span>操作人：</span>
+                            <span id="userName">admin</span>
+                            <span >|</span>
+                            <span id="orgName">系统管理员</span>
+                        </div>
+                        <div class="oneRight">
+                            <span>日期：</span>
+                            <span id="nowDate">2018-8-21</span>
+                        </div>
+                    </div>
+                    <div class="OneBody mt24">
+                        <div class="oneBody">
+                            <ul class="myTable">
+                               <li class="layui-row">
+                                   <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*业务字典编码</div>
+                                   <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="id"  autocomplete="off" class="layui-hide">
+                                        <input type="text"  name="dictCode"   lay-verify="required" placeholder="请输入业务字典编码" autocomplete="off" class="layui-input">
+                                   </div>
+                               </li>
+                               <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*业务字典名称</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="dictName" required  lay-verify="required" placeholder="请输入业务字典名称" autocomplete="off" class="layui-input">
+                                    </div>
+
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">*业务字典类型</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="dictType" required  lay-verify="required" placeholder="请输入业务字典类型" autocomplete="off" class="layui-input">
+                                    </div>
+
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">上级业务字典</div>
+                                        <div class="layui-form-item m0 layui-col-md6 layui-col-sm6" id="result">
+                                            <div class="layui-input-inline">
+
+                                                <input    value="-1"  id="pid"  cyType="treeTool"
+                                                          cyprops="url:'/frontframe/json/select.json',name:'pid'" placeholder="请选择上级业务字典" class="layui-input"/>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">业务字典描述</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="description"  placeholder="请输入业务字典描述" autocomplete="off" class="layui-input">
+                                    </div>
+
+                                </li>
+                                <li class="layui-row">
+                                    <div class="layui-inline layui-col-md2 layui-col-sm2 tableTR">排序</div>
+                                    <div class="layui-form-item m0 layui-col-md6 layui-col-sm6">
+                                        <input type="text" name="dictOrder" required placeholder="请输入排序" autocomplete="off" class="layui-input">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="layui-form-item mt34">
+                    <div class="layui-input-block bodyBtn">
+                        <button id="submit" class="layui-btn" lay-submit lay-filter="formSubmit">保存并提交</button>
+                        <button id="cancel" class="layui-btn layui-btn-primary">取消</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../../../statics/js/common.js"></script>
+    <script src="../../../statics/js/systemSetting/dict/add.js"></script>
+    </body>
+</html>
+    
