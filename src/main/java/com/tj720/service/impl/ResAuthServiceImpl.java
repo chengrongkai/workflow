@@ -1,6 +1,7 @@
 package com.tj720.service.impl;
 
 import com.tj720.dao.system.ResAuthDao;
+import com.tj720.entity.system.User;
 import com.tj720.entity.system.menu.ResAuth;
 import com.tj720.service.ResAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -60,5 +62,14 @@ public class ResAuthServiceImpl implements ResAuthService{
         });
 //        resAuthDao.saveAll(resAuthList);
         return false;
+    }
+
+    public static void main(String[] args) {
+        HashMap A  = new HashMap();
+        User user = new User();
+        user.setName("zhangsan");
+        A.put("A",user);
+        HashMap B = (HashMap) A.clone();
+        System.out.println((User)A.get("A"));//输出2222
     }
 }
