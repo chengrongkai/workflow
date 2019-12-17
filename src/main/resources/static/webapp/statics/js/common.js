@@ -7,7 +7,7 @@ PROPERTY.prototype.projectPath = "/";
 
 // PROPERTY.prototype.projectPath = getRootPath();
 
-PROPERTY.prototype.md5Str="tj720";
+PROPERTY.prototype.md5Str="crk";
 
 PROPERTY.prototype.getProjectPath = function () {
     return this.projectPath;

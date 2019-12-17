@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.tj720.dao.mybatis.SysResAuthMapper" >
-  <resultMap id="BaseResultMap" type="com.tj720.entity.mybatis.SysResAuth" >
+<mapper namespace="com.crk.dao.mybatis.SysResAuthMapper" >
+  <resultMap id="BaseResultMap" type="com.crk.entity.mybatis.SysResAuth" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="role_id" property="roleId" jdbcType="VARCHAR" />
     <result column="function_id" property="functionId" jdbcType="VARCHAR" />
@@ -31,7 +31,7 @@
     delete from sys_res_auth
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.tj720.entity.mybatis.SysResAuth" >
+  <insert id="insert" parameterType="com.crk.entity.mybatis.SysResAuth" >
     insert into sys_res_auth (id, role_id, function_id, 
       function_type, sort, remark, 
       status, creator, updater, 
@@ -43,7 +43,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{ext1,jdbcType=VARCHAR}, 
       #{ext2,jdbcType=VARCHAR}, #{ext3,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.tj720.entity.mybatis.SysResAuth" >
+  <insert id="insertSelective" parameterType="com.crk.entity.mybatis.SysResAuth" >
     insert into sys_res_auth
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -134,7 +134,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tj720.entity.mybatis.SysResAuth" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.crk.entity.mybatis.SysResAuth" >
     update sys_res_auth
     <set >
       <if test="roleId != null" >
@@ -179,7 +179,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tj720.entity.mybatis.SysResAuth" >
+  <update id="updateByPrimaryKey" parameterType="com.crk.entity.mybatis.SysResAuth" >
     update sys_res_auth
     set role_id = #{roleId,jdbcType=VARCHAR},
       function_id = #{functionId,jdbcType=VARCHAR},

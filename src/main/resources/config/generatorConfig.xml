@@ -18,7 +18,7 @@
 
         <!-- 生成实体类地址 -->
 
-        <javaModelGenerator targetPackage="com.tj720.entity.mybatis"
+        <javaModelGenerator targetPackage="com.crk.entity.mybatis"
                             targetProject="src/main/java">
 
             <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
@@ -37,7 +37,7 @@
 
         <!-- 生成mapxml对应client，也就是接口dao -->
 
-        <javaClientGenerator targetPackage="com.tj720.dao.mybatis"
+        <javaClientGenerator targetPackage="com.crk.dao.mybatis"
                              targetProject="src/main/java" type="XMLMAPPER">
 
             <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
